@@ -8,8 +8,14 @@ from pathlib import Path
 import sys
 import tokenize
 
+roots = [Path("legacy"), Path("tools"), Path("src"), Path("tests")]
+paths = []
+for root in roots:
+    if root.exists():
+        paths.extend(root.rglob("*.py"))
+
 errors = []
-for path in sorted(list(Path('legacy').rglob('*.py')) + list(Path('tools').glob('*.py'))):
+for path in sorted(paths):
     try:
         with tokenize.open(path) as handle:
             source = handle.read()

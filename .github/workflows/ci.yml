@@ -1,4 +1,4 @@
-name: syntax-check
+name: repository-checks
 
 on:
   push:
@@ -14,7 +14,16 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.10"
+      - name: Install lightweight test dependencies
+        run: |
+          python -m pip install --upgrade pip pytest
       - name: Run syntax smoke test
         run: bash tools/smoke_test.sh
+      - name: Check repository metadata and script tables
+        run: python tools/check_repository_consistency.py
       - name: Report hard-coded paths without failing legacy provenance
         run: python tools/audit_hardcoded_paths.py --legacy-mode report
+      - name: Run Chapter 4 synthetic smoke test
+        run: python tools/run_synthetic_smoke.py
+      - name: Run pytest suite
+        run: python -m pytest

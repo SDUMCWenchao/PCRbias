@@ -1,0 +1,43 @@
+step_id	stage	script	status	required_inputs	main_outputs	command_example	resume_safe
+00a	manifest_build	legacy/chapter4/00_manifest_builder.py	canonical_or_support	samples_meta.tsv; raw_data or raw_data_trimmed	analysis_results/00_manifest/manifest.tsv	python legacy/chapter4/00_manifest_builder.py --project_dir PROJECT --meta PROJECT/samples_meta.tsv --raw_dir PROJECT/raw_data --out_dir PROJECT/analysis_results/00_manifest	no
+00b	manifest_validate	legacy/chapter4/00_validate_manifest.py	canonical_or_support	manifest.tsv	validated manifest report	python legacy/chapter4/00_validate_manifest.py --help	no
+00c	primer_trim	legacy/chapter4/00_trim_primers.py	canonical_or_support	raw FASTQ; primer definitions	trimmed FASTQ	python legacy/chapter4/00_trim_primers.py --help	partial
+00d	primer_residue_check	legacy/chapter4/00_check_primer_residue.py	canonical_or_support	FASTQ after trimming	primer residue report	python legacy/chapter4/00_check_primer_residue.py --help	no
+01a	qc	legacy/chapter4/01_QC.py	canonical_or_support	FASTQ or manifest	QC tables	python legacy/chapter4/01_QC.py --help	no
+01b	preprocess_se	legacy/chapter4/01_preprocess_sequences_se.py	canonical_or_support	manifest.tsv; FASTQ files	per-sample stats; global SQLite; ALL_UNIQUE_SEQUENCES.fasta	python legacy/chapter4/01_preprocess_sequences_se.py --project_dir PROJECT --manifest PROJECT/analysis_results/00_manifest/manifest.tsv --out_dir PROJECT/analysis_results/01_Sequences	yes
+01c	global_count_filter	legacy/chapter4/01b_build_global_counts_and_filter.py	canonical_or_support	per-sample stats/global sequences	global count and filtered sequence tables	python legacy/chapter4/01b_build_global_counts_and_filter.py --help	no
+02a	sequence_features	legacy/chapter4/02a_calc_features_chunk.py	canonical_or_support	unique sequence FASTA/chunk input	sequence-level feature chunks	python legacy/chapter4/02a_calc_features_chunk.py --help	partial
+02a_submit	sequence_features_submit	legacy/chapter4/02a_submit_features.sh	canonical_or_support	sequence chunks; Slurm environment	feature jobs	bash legacy/chapter4/02a_submit_features.sh	partial
+02b1	kmer_aggregate	legacy/chapter4/02b1_agg_kmers_chunk.py	canonical_or_support	sequence chunks	k-mer aggregate chunks	python legacy/chapter4/02b1_agg_kmers_chunk.py --help	partial
+02b1_submit	kmer_aggregate_submit	legacy/chapter4/02b1_submit_agg_kmers.sh	canonical_or_support	sequence chunks; Slurm environment	k-mer aggregate jobs	bash legacy/chapter4/02b1_submit_agg_kmers.sh	partial
+02b2	kmer_select_from_agg	legacy/chapter4/02b2_select_kmers_from_agg.py	canonical_or_support	k-mer aggregate chunks	selected k-mers	python legacy/chapter4/02b2_select_kmers_from_agg.py --help	no
+02b	kmer_select	legacy/chapter4/02b_select_kmers.py	canonical_or_support	k-mer tables	selected k-mer vocabulary	python legacy/chapter4/02b_select_kmers.py --help	no
+02c	kmer_expand	legacy/chapter4/02c_expand_kmers.py	canonical_or_support	selected k-mers	expanded k-mer feature set	python legacy/chapter4/02c_expand_kmers.py --help	no
+02d	kmer_union_vocab	legacy/chapter4/02d_make_kmer_union_vocab.py	canonical_or_support	selected/expanded k-mer sets	union vocabulary	python legacy/chapter4/02d_make_kmer_union_vocab.py --help	no
+02e	kmer_regions	legacy/chapter4/02e_build_kmer_regions_chunk.py	canonical_or_support	sequence FASTA; k-mer vocabulary	regional k-mer feature chunks	python legacy/chapter4/02e_build_kmer_regions_chunk.py --help	partial
+02e_submit	kmer_regions_submit	legacy/chapter4/02e_submit_kmer_regions.sh	canonical_or_support	k-mer region chunks; Slurm environment	regional k-mer jobs	bash legacy/chapter4/02e_submit_kmer_regions.sh	partial
+03a	pairs_counts_db	legacy/chapter4/03a_prepare_pairs_and_counts_db.py	canonical_or_support	manifest; per-sample stats	pair manifest and counts database	python legacy/chapter4/03a_prepare_pairs_and_counts_db.py --help	no
+03b	dataweaver	legacy/chapter4/03b_dataweaver_chunk.py	canonical_or_support	pair/count DB; feature tables	training chunks	python legacy/chapter4/03b_dataweaver_chunk.py --help	partial
+04a	stat_chunk	legacy/chapter4/04a_stat_chunk.py	canonical_or_support	training chunks/stat inputs	partial statistical summaries	python legacy/chapter4/04a_stat_chunk.py --help	partial
+04b	reduce_partials	legacy/chapter4/04b_reduce_partials.py	canonical_or_support	partial stat files	reduced statistics	python legacy/chapter4/04b_reduce_partials.py --help	no
+04c	meta_summary	legacy/chapter4/04c_meta_summary.py	canonical_or_support	reduced statistics	meta-summary table	python legacy/chapter4/04c_meta_summary.py --help	no
+04d	pick_top_features	legacy/chapter4/04d_pick_top_features.py	canonical_or_support	stat summary	top feature lists	python legacy/chapter4/04d_pick_top_features.py --help	no
+04h	joint_rank_stratify	legacy/chapter4/04h_joint_rank_stratify.py	canonical_or_support	feature statistics	joint rank reports	python legacy/chapter4/04h_joint_rank_stratify.py --help	no
+05	bias_worker	legacy/chapter4/05_bias_worker.py	canonical_or_support	feature/stat tables	bias summaries	python legacy/chapter4/05_bias_worker.py --help	partial
+05a	plot_joint_reports	legacy/chapter4/05a_plot_joint_reports.py	canonical_or_support	joint reports	figures/tables	python legacy/chapter4/05a_plot_joint_reports.py --help	no
+05b	export_top_features	legacy/chapter4/05b_export_top_features.py	canonical_or_support	feature ranking reports	top feature exports	python legacy/chapter4/05b_export_top_features.py --help	no
+06a	prepare_ml	legacy/chapter4/06a_prepare_ml_datasets.py	canonical_or_support	training chunks; FASTA; feature reports	ML model input matrices	python legacy/chapter4/06a_prepare_ml_datasets.py --project_dir PROJECT	no
+06b	train_rf	legacy/chapter4/06b_train_rf.py	canonical_or_support	ML input directory	RF/ExtraTrees model, metrics, predictions	python legacy/chapter4/06b_train_rf.py --dataset_dir DATASET --out_dir OUT --model rf	no
+06m	train_seqcnn	legacy/chapter4/06m_train_seqcnn1d.py	canonical_or_support	ML sequence inputs	1D-CNN model and metrics	python legacy/chapter4/06m_train_seqcnn1d.py --help	no
+06t	train_xgb	legacy/chapter4/06t_train_xgb.py	canonical_or_support	ML input directory	XGBoost model and metrics	python legacy/chapter4/06t_train_xgb.py --help	no
+07b	bootstrap_ci	legacy/chapter4/07b_bootstrap_ci_from_preds.py	canonical_or_support	predictions and truth arrays	bootstrap CI tables	python legacy/chapter4/07b_bootstrap_ci_from_preds.py --help	no
+07c	shap_xgb	legacy/chapter4/07c_shap_xgb_tables.py	canonical_or_support	XGBoost model/input matrices	SHAP tables	python legacy/chapter4/07c_shap_xgb_tables.py --help	no
+07f	shap_rf	legacy/chapter4/07f_shap_rf_tables.py	canonical_or_support	RF model/input matrices	SHAP tables	python legacy/chapter4/07f_shap_rf_tables.py --help	no
+07g	seqcnn_ig	legacy/chapter4/07g_attr_seqcnn_ig_tables.py	canonical_or_support	CNN model/sequence inputs	integrated-gradient tables	python legacy/chapter4/07g_attr_seqcnn_ig_tables.py --help	no
+08a	pack_results	legacy/chapter4/08a_pack_results_for_writing.py	canonical_or_support	selected result tables	writing result bundle	python legacy/chapter4/08a_pack_results_for_writing.py --help	no
+08b	dataset_overview	legacy/chapter4/08b_export_dataset_overview.py	canonical_or_support	manifest and processing outputs	dataset overview table	python legacy/chapter4/08b_export_dataset_overview.py --help	no
+08c	true_counts_pair_manifest	legacy/chapter4/08c_export_true_counts_and_pair_manifest.py	canonical_or_support	pair/count tables	true counts and pair manifest exports	python legacy/chapter4/08c_export_true_counts_and_pair_manifest.py --help	no
+08f	prediction_tables	legacy/chapter4/08f_make_D_pred_tables.py	canonical_or_support	model metrics/predictions	prediction summary tables	python legacy/chapter4/08f_make_D_pred_tables.py --help	no
+08g	explain_tables	legacy/chapter4/08g_make_E_tables.py	canonical_or_support	SHAP/IG outputs	explainability tables	python legacy/chapter4/08g_make_E_tables.py --help	no
+08h	final_tables	legacy/chapter4/08h_make_F_tables.py	canonical_or_support	all selected result tables	final paper-ready tables	python legacy/chapter4/08h_make_F_tables.py --help	no
+ext	external_validation	NA	external_validation	main model-input artifacts; external sequence pool	external validation models and explanation outputs	See ext* scripts after main workflow outputs exist	partial

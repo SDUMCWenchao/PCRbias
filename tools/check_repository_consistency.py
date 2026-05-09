@@ -73,14 +73,15 @@ def check_chapter4_status_coverage(root: Path = ROOT) -> list[str]:
     if not status_file.exists():
         return ["missing docs/CHAPTER4_SCRIPT_STATUS.tsv"]
     try:
-        documented = _status_paths(status_file)
+        all_documented = _status_paths(status_file)
     except ValueError as exc:
         return [str(exc)]
-    actual = _chapter4_script_paths(root)
-    missing = sorted(actual - documented)
-    extra = sorted(documented - actual)
+    documented_scripts = {path for path in all_documented if Path(path).suffix in SCRIPT_SUFFIXES}
+    actual_scripts = _chapter4_script_paths(root)
+    missing = sorted(actual_scripts - documented_scripts)
+    stale = sorted(path for path in all_documented if not (root / path).exists())
     problems = [f"missing Chapter 4 status entry: {path}" for path in missing]
-    problems.extend(f"stale Chapter 4 status entry: {path}" for path in extra)
+    problems.extend(f"stale Chapter 4 status entry: {path}" for path in stale)
     return problems
 
 

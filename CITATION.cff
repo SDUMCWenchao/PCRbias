@@ -5,7 +5,7 @@ type: software
 authors:
   - family-names: Du
     given-names: WenGo
-repository-code: "https://github.com/SDUMCWenchao/PCR_bias"
+repository-code: "https://github.com/SDUMCWenchao/PCRbias"
 license: AGPL-3.0
 version: "0.1.0"
 date-released: "2026-05-09"

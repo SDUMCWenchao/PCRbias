@@ -5,13 +5,15 @@ cd "$ROOT"
 
 python - <<'PY'
 from pathlib import Path
-import py_compile
 import sys
+import tokenize
 
 errors = []
 for path in sorted(list(Path('legacy').rglob('*.py')) + list(Path('tools').glob('*.py'))):
     try:
-        py_compile.compile(str(path), doraise=True)
+        with tokenize.open(path) as handle:
+            source = handle.read()
+        compile(source, str(path), "exec")
     except Exception as exc:
         errors.append((path, exc))
 

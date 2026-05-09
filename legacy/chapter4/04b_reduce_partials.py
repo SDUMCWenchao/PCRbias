@@ -40,7 +40,7 @@ def pearson_from_sums(w, x_sum, x2_sum, y_sum, y2_sum, xy_sum):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--project_dir", default="/datapool/zhangw/duwenchao/var/2511_PCR_Bias")
+    ap.add_argument("--project_dir", default="/path/to/PCR_bias_chapter4")
     args = ap.parse_args()
 
     project = Path(args.project_dir)

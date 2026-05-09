@@ -245,7 +245,7 @@ def build_kmer_sparse_from_fasta(
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--project_dir", default="/datapool/zhangw/duwenchao/var/2511_PCR_Bias")
+    ap.add_argument("--project_dir", default="/path/to/PCR_bias_chapter4")
     ap.add_argument("--training_dir", default="analysis_results/03_DataWeaver/training_chunks")
     ap.add_argument("--fasta", default="analysis_results/01_Sequences/ALL_UNIQUE_SEQUENCES.fasta")
     ap.add_argument("--out_base", default="analysis_results/05_ModelInputs")

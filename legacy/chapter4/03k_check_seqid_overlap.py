@@ -2,7 +2,7 @@
 import gzip, csv, sqlite3
 from pathlib import Path
 
-PROJECT="/datapool/zhangw/duwenchao/var/2511_PCR_Bias"
+PROJECT="/path/to/PCR_bias_chapter4"
 weaver=Path(PROJECT)/"analysis_results/03_DataWeaver"
 feat=Path(PROJECT)/"analysis_results/02_Features"
 

@@ -1,6 +1,6 @@
 # Chapter 4 workflow notes
 
-The Chapter 4 scripts are more exploratory and include multiple historical branches. Before public release, designate canonical scripts for each stage.
+The Chapter 4 directory preserves the thesis analysis history while documenting the recommended public execution order. Script-level status labels are listed in `docs/CHAPTER4_SCRIPT_STATUS.tsv`.
 
 ## Current logical stages
 
@@ -14,15 +14,15 @@ The Chapter 4 scripts are more exploratory and include multiple historical branc
 8. Explainability: `07*`
 9. External validation: `ext*`
 
-## Canonicalization needed
+## Canonical and variant status
 
-- Keep the newest verified version as canonical.
-- Move older scripts to `legacy/deprecated/` or document them explicitly.
-- Avoid two scripts with overlapping purpose unless the difference is scientifically meaningful.
+- `canonical_or_support` scripts in `docs/CHAPTER4_SCRIPT_STATUS.tsv` are the recommended public path for the numbered Chapter 4 workflow.
+- `historical_variant` scripts (`_v2`, `_v3`, `topbias`, high-k/deep/model-specific branches) are retained for thesis provenance and sensitivity comparisons.
+- `external_validation` scripts are intentionally separate and should be run only after the main model-input artifacts exist.
+- `utility` scripts are submission/export/environment helpers rather than independent analysis stages.
 
-## High-risk items before GitHub release
+## Public-run requirements
 
-- Hard-coded `/datapool/.../2511_PCR_Bias` paths.
-- Slurm scripts with absolute log paths.
-- Large intermediate/model files should remain excluded by `.gitignore`.
-- The scripts need a small public demo dataset for reproducibility testing.
+- Replace placeholder paths such as `/path/to/PCR_bias_chapter4` with local paths through command-line arguments or `configs/config.yaml`.
+- Keep large intermediate/model files excluded by `.gitignore`.
+- Use `examples/synthetic/` only for parser/path-wiring checks; use local real data for scientific analyses.

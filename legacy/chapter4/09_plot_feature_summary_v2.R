@@ -5,8 +5,8 @@ library(gridExtra)
 library(hexbin) # 确保已安装
 
 # === 配置路径 ===
-input_dir <- "/datapool/zhangw/duwenchao/var/2511_PCR_Bias/analysis/09_Feature_Summary"
-output_dir <- "/datapool/zhangw/duwenchao/var/2511_PCR_Bias/analysis/09_Feature_Summary/plots_v2"
+input_dir <- "/path/to/PCR_bias_chapter4/analysis/09_Feature_Summary"
+output_dir <- "/path/to/PCR_bias_chapter4/analysis/09_Feature_Summary/plots_v2"
 
 if (!dir.exists(output_dir)) dir.create(output_dir)
 

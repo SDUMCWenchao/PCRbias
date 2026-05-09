@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 set -euo pipefail
-ROOT="/datapool/zhangw/duwenchao/var/2511_PCR_Bias/external_test/analysis_results/05_ModelInputs_external_topbias_resplit_v1_resplit_v1"
+ROOT="/path/to/PCR_bias_chapter4/external_test/analysis_results/05_ModelInputs_external_topbias_resplit_v1_resplit_v1"
 
 for tag in top1p top0p5p top0p1p; do
   echo "==== ${tag} ===="

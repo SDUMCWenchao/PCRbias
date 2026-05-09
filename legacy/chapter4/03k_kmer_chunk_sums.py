@@ -87,7 +87,7 @@ def fetch_counts(conn: sqlite3.Connection, seq_ids: List[str]) -> Dict[str,int]:
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--project_dir", default="/datapool/zhangw/duwenchao/var/2511_PCR_Bias")
+    ap.add_argument("--project_dir", default="/path/to/PCR_bias_chapter4")
     ap.add_argument("--chunk_name", required=True, help="chunk_0001")
     ap.add_argument("--kmer_sparse_dir", default=None, help="dir containing chunk_XXXX.kmer.tsv.gz")
     ap.add_argument("--vocab_tsv", default=None, help="default: analysis_results/02_Features/kmervocab/kmer_vocab.tsv")

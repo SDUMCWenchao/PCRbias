@@ -69,3 +69,7 @@ configs/config.yaml
 *.tar.gz
 *.zip
 *.7z
+
+# Tiny public synthetic fixtures are intentionally versioned.
+!examples/synthetic/raw_fastq/
+!examples/synthetic/raw_fastq/*.fastq

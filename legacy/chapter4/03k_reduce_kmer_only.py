@@ -35,7 +35,7 @@ def read_pairs(path: Path) -> List[dict]:
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--project_dir", default="/datapool/zhangw/duwenchao/var/2511_PCR_Bias")
+    ap.add_argument("--project_dir", default="/path/to/PCR_bias_chapter4")
     ap.add_argument("--eps", type=float, default=1e-12)
     ap.add_argument("--topn", type=int, default=50)
     args = ap.parse_args()

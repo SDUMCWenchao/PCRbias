@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-ROOT="/datapool/zhangw/duwenchao/var/2511_PCR_Bias"
+ROOT="/path/to/PCR_bias_chapter4"
 
-PROJECT_DIR="/datapool/zhangw/duwenchao/var/2511_PCR_Bias/external_test"
+PROJECT_DIR="/path/to/PCR_bias_chapter4/external_test"
 INPUTS_ROOT="$PROJECT_DIR/analysis_results/05_ModelInputs_external_topbias_resplit_v1"
 MODELS_ROOT="$PROJECT_DIR/analysis_results/06_Models_external_topbias_v2_resplit_v1"
 WEAVER_SUBDIR="analysis_results/03_DataWeaver_Blayer_with_GCfix_GCall"

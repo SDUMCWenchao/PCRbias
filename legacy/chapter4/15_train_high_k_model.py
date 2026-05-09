@@ -10,7 +10,7 @@ from sklearn.metrics import r2_score
 from scipy.stats import pearsonr
 
 # === 配置 ===
-BASE_DIR = "/datapool/zhangw/duwenchao/var/2511_PCR_Bias"
+BASE_DIR = "/path/to/PCR_bias_chapter4"
 # 注意：这里改为 HighK 目录
 INPUT_DIR = os.path.join(BASE_DIR, "analysis/10_Modeling_Data_HighK")
 OUTPUT_DIR = os.path.join(BASE_DIR, "analysis/12_HighK_Model_Results")

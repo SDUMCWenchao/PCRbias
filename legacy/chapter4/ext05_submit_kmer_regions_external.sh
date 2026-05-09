@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-MAIN="/datapool/zhangw/duwenchao/var/2511_PCR_Bias"
+MAIN="/path/to/PCR_bias_chapter4"
 EXT="${MAIN}/external_test"
 SCRIPTS="${MAIN}/scripts"
 

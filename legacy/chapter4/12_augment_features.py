@@ -7,7 +7,7 @@ from Bio.SeqUtils import MeltingTemp as mt
 from Bio.Seq import Seq
 
 # === 配置 ===
-BASE_DIR = "/datapool/zhangw/duwenchao/var/2511_PCR_Bias"
+BASE_DIR = "/path/to/PCR_bias_chapter4"
 INPUT_DIR = os.path.join(BASE_DIR, "analysis/10_Modeling_Data") # 之前对齐好的数据
 OUTPUT_DIR = os.path.join(BASE_DIR, "analysis/10_Modeling_Data_Augmented")
 

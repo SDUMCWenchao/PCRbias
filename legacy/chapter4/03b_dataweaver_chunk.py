@@ -62,7 +62,7 @@ def read_core_chunk(core_path: Path) -> Tuple[List[str], List[dict]]:
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--project_dir", default="/datapool/zhangw/duwenchao/var/2511_PCR_Bias")
+    ap.add_argument("--project_dir", default="/path/to/PCR_bias_chapter4")
     ap.add_argument("--chunk_name", required=True, help="e.g., chunk_0001")
     ap.add_argument("--feature_kind", default="core", choices=["core"], help="currently only core (recommended)")
     args = ap.parse_args()

@@ -9,10 +9,18 @@
 
 ## P1 — reproducibility hardening
 
-- Replace hard-coded `/datapool/...` defaults with `--project-dir` and/or `configs/config.yaml`.
-- Mark Chapter 4 scripts as `canonical`, `historical`, or `deprecated`.
-- Add a tiny synthetic dataset that validates 1–2 complete command paths without exposing real data.
-- Pin dependency versions from the final thesis server environment.
+Completed for the public draft:
+
+- Replaced private absolute server-path defaults with public placeholder paths that users can override with command-line arguments and/or `configs/config.yaml`.
+- Added Chapter 4 status labels in `docs/CHAPTER4_SCRIPT_STATUS.tsv` so canonical/support, historical-variant, external-validation, utility, and deprecated-legacy scripts are distinguishable.
+- Added a tiny synthetic fixture under `examples/synthetic/` for parser/path-wiring checks without exposing real sequencing data.
+- Pinned the Python dependency baseline in `requirements.txt` and mirrored practical pins in `environment.yml`.
+
+Remaining hardening work:
+
+- Promote shared sequence, k-mer, statistics, and model-training functions into a package.
+- Add tests that execute one or two complete synthetic fixture command paths after canonical command interfaces are stable.
+- Replace placeholder paths in downstream deployments with site-local config files that remain uncommitted.
 
 ## P2 — package refactoring
 

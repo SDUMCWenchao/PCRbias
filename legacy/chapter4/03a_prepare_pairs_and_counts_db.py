@@ -87,7 +87,7 @@ def build_counts_db(stats_path: Path, db_path: Path) -> Tuple[int,int]:
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--project_dir", default="/datapool/zhangw/duwenchao/var/2511_PCR_Bias")
+    ap.add_argument("--project_dir", default="/path/to/PCR_bias_chapter4")
     ap.add_argument("--meta_tsv", default=None, help="default: <project_dir>/samples_meta.tsv")
     ap.add_argument("--seq_dir", default=None, help="default: <project_dir>/analysis_results/01_Sequences")
     args = ap.parse_args()

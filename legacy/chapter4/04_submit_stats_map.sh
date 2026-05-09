@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-PROJECT_DIR="/datapool/zhangw/duwenchao/var/2511_PCR_Bias"
+PROJECT_DIR="/path/to/PCR_bias_chapter4"
 SCRIPTS_DIR="${PROJECT_DIR}/scripts"
 FEATURE_TASKS_TSV="${PROJECT_DIR}/analysis_results/02_Features/tasks.tsv"
 

@@ -24,7 +24,7 @@ def read_agg(path: Path):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--project_dir", default="/datapool/zhangw/duwenchao/var/2511_PCR_Bias")
+    ap.add_argument("--project_dir", default="/path/to/PCR_bias_chapter4")
     ap.add_argument("--min_df", type=int, default=10)
     ap.add_argument("--max_per_k", type=int, default=2000)
     args = ap.parse_args()

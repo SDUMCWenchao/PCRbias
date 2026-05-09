@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 
 # === 配置路径 ===
-BASE_DIR = "/datapool/zhangw/duwenchao/var/2511_PCR_Bias"
+BASE_DIR = "/path/to/PCR_bias_chapter4"
 META_FILE = os.path.join(BASE_DIR, "samples_meta.tsv")
 INPUT_CSV_DIR = os.path.join(BASE_DIR, "analysis/09_Feature_Summary/Final_CSVs")
 OUTPUT_DIR = os.path.join(BASE_DIR, "analysis/10_Modeling_Data")

@@ -3,7 +3,7 @@ import pandas as pd
 import subprocess
 
 # === 配置 ===
-BASE_DIR = "/datapool/zhangw/duwenchao/var/2511_PCR_Bias"
+BASE_DIR = "/path/to/PCR_bias_chapter4"
 SCRIPT_PATH = os.path.join(BASE_DIR, "scripts/05_bias_worker.py")
 META_FILE = os.path.join(BASE_DIR, "samples_meta.tsv")
 MAPPING_DIR = os.path.join(BASE_DIR, "analysis/02_Mapping")

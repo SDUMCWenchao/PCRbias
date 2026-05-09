@@ -4,7 +4,7 @@ import pandas as pd
 import gc
 
 # === 配置路径 ===
-BASE_DIR = "/datapool/zhangw/duwenchao/var/2511_PCR_Bias"
+BASE_DIR = "/path/to/PCR_bias_chapter4"
 STATS_DIR = os.path.join(BASE_DIR, "analysis/07_Seq_Extraction") # 样本统计信息 (Count/Abundance)
 FEATURE_FILE = os.path.join(BASE_DIR, "analysis/09_Feature_Summary/ALL_UNIQUE_FEATURES.tsv") # 特征库
 OUTPUT_DIR = os.path.join(BASE_DIR, "analysis/09_Feature_Summary/Final_CSVs") # 输出目录

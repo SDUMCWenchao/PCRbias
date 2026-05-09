@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-MODELS_ROOT="${1:-/datapool/zhangw/duwenchao/var/2511_PCR_Bias/external_test/analysis_results/06_Models_external_topbias_v2_resplit_v1}"
-OUT_PREFIX="${2:-/datapool/zhangw/duwenchao/var/2511_PCR_Bias/external_test/_upload/external_attr_pack_$(date +%Y%m%d_%H%M%S)}"
+MODELS_ROOT="${1:-/path/to/PCR_bias_chapter4/external_test/analysis_results/06_Models_external_topbias_v2_resplit_v1}"
+OUT_PREFIX="${2:-/path/to/PCR_bias_chapter4/external_test/_upload/external_attr_pack_$(date +%Y%m%d_%H%M%S)}"
 SPLIT_SIZE="${3:-1800m}"  # 单文件上限附近：你自己按上传限制改
 
 mkdir -p "$(dirname "$OUT_PREFIX")"

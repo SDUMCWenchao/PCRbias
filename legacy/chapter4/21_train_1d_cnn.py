@@ -11,7 +11,7 @@ from sklearn.metrics import r2_score
 from scipy.stats import pearsonr
 
 # === 配置 ===
-BASE_DIR = "/datapool/zhangw/duwenchao/var/2511_PCR_Bias"
+BASE_DIR = "/path/to/PCR_bias_chapter4"
 INPUT_DIR = os.path.join(BASE_DIR, "analysis/10_Modeling_Data_Deep")
 OUTPUT_DIR = os.path.join(BASE_DIR, "analysis/17_CNN_Results")
 

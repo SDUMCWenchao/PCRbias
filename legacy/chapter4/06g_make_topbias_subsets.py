@@ -59,7 +59,7 @@ def subset_meta(meta_path: Path, idx: np.ndarray):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--project_dir", default="/datapool/zhangw/duwenchao/var/2511_PCR_Bias")
+    ap.add_argument("--project_dir", default="/path/to/PCR_bias_chapter4")
     ap.add_argument("--inputs_root", default="analysis_results/05_ModelInputs_v3")
     ap.add_argument("--out_root", default="analysis_results/05_ModelInputs_v3_topbias")
     ap.add_argument("--fracs", default="0.01,0.005,0.001", help="top fractions by |y|, e.g. 0.01,0.005,0.001")

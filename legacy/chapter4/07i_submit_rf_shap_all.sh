@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-PROJECT="/datapool/zhangw/duwenchao/var/2511_PCR_Bias"
+PROJECT="/path/to/PCR_bias_chapter4"
 TASKS="$PROJECT/analysis_results/06_Models_v3_topbias/rf_shap_tasks_all.tsv"
 LOGDIR="$PROJECT/analysis_results/06_Models_v3_topbias/_rf_shap_logs"
 mkdir -p "$LOGDIR"

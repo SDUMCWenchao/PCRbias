@@ -7,7 +7,7 @@ from pathlib import Path
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--project_dir", default="/datapool/zhangw/duwenchao/var/2511_PCR_Bias")
+    ap.add_argument("--project_dir", default="/path/to/PCR_bias_chapter4")
     ap.add_argument("--top_n", type=int, default=200)
     ap.add_argument("--min_pairs", type=int, default=1)
     ap.add_argument("--by", choices=["stability_score","mean_abs_corr","median_abs_corr"], default="stability_score")

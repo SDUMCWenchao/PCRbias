@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """Report hard-coded private/server paths in the repository.
 
-By default, this command fails if private/server paths are found. For the current
-legacy-preserving public draft, use `--legacy-mode report` to report hits without
-failing CI.
+By default, this command fails if private/server paths are found. Use
+`--legacy-mode report` only when auditing an unreleased downstream tree where
+private paths are temporarily expected and should be reported without failing.
 """
 from __future__ import annotations
 
@@ -61,7 +61,7 @@ def build_parser() -> argparse.ArgumentParser:
         "--legacy-mode",
         choices=["fail", "report"],
         default="fail",
-        help="Use 'report' while legacy scripts intentionally preserve original paths.",
+        help="Use 'report' to report hits without failing for temporary downstream audits.",
     )
     parser.add_argument(
         "--root",

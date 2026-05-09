@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 import gc
 
 # === Configuration ===
-BASE_DIR = "/datapool/zhangw/duwenchao/var/2511_PCR_Bias"
+BASE_DIR = "/path/to/PCR_bias_chapter4"
 INPUT_DIR = os.path.join(BASE_DIR, "analysis/10_Modeling_Data_HighK")
 OUTPUT_DIR = os.path.join(BASE_DIR, "analysis/13_SHAP_Analysis_HighK")
 

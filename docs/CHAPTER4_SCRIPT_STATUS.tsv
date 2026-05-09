@@ -1,0 +1,170 @@
+path	status	notes
+legacy/chapter4/00_check_clip_effect_on_chunk.py	canonical_or_support	Part of the recommended public Chapter 4 order; shell/Slurm wrappers are support files for the adjacent numbered Python steps.
+legacy/chapter4/00_check_primer_residue.py	canonical_or_support	Part of the recommended public Chapter 4 order; shell/Slurm wrappers are support files for the adjacent numbered Python steps.
+legacy/chapter4/00_manifest_builder.py	canonical_or_support	Part of the recommended public Chapter 4 order; shell/Slurm wrappers are support files for the adjacent numbered Python steps.
+legacy/chapter4/00_trim_primers.py	canonical_or_support	Part of the recommended public Chapter 4 order; shell/Slurm wrappers are support files for the adjacent numbered Python steps.
+legacy/chapter4/00_validate_manifest.py	canonical_or_support	Part of the recommended public Chapter 4 order; shell/Slurm wrappers are support files for the adjacent numbered Python steps.
+legacy/chapter4/01_QC.py	canonical_or_support	Part of the recommended public Chapter 4 order; shell/Slurm wrappers are support files for the adjacent numbered Python steps.
+legacy/chapter4/01_preprocess_sequences_se.py	canonical_or_support	Part of the recommended public Chapter 4 order; shell/Slurm wrappers are support files for the adjacent numbered Python steps.
+legacy/chapter4/01b_build_global_counts_and_filter.py	canonical_or_support	Part of the recommended public Chapter 4 order; shell/Slurm wrappers are support files for the adjacent numbered Python steps.
+legacy/chapter4/02_mapping.slurm	canonical_or_support	Part of the recommended public Chapter 4 order; shell/Slurm wrappers are support files for the adjacent numbered Python steps.
+legacy/chapter4/02a_calc_features_chunk.py	canonical_or_support	Part of the recommended public Chapter 4 order; shell/Slurm wrappers are support files for the adjacent numbered Python steps.
+legacy/chapter4/02a_submit_features.sh	canonical_or_support	Part of the recommended public Chapter 4 order; shell/Slurm wrappers are support files for the adjacent numbered Python steps.
+legacy/chapter4/02b1_agg_kmers_chunk.py	canonical_or_support	Part of the recommended public Chapter 4 order; shell/Slurm wrappers are support files for the adjacent numbered Python steps.
+legacy/chapter4/02b1_submit_agg_kmers.sh	canonical_or_support	Part of the recommended public Chapter 4 order; shell/Slurm wrappers are support files for the adjacent numbered Python steps.
+legacy/chapter4/02b2_select_kmers_from_agg.py	canonical_or_support	Part of the recommended public Chapter 4 order; shell/Slurm wrappers are support files for the adjacent numbered Python steps.
+legacy/chapter4/02b_select_kmers.py	canonical_or_support	Part of the recommended public Chapter 4 order; shell/Slurm wrappers are support files for the adjacent numbered Python steps.
+legacy/chapter4/02c_expand_kmers.py	canonical_or_support	Part of the recommended public Chapter 4 order; shell/Slurm wrappers are support files for the adjacent numbered Python steps.
+legacy/chapter4/02d_make_kmer_union_vocab.py	canonical_or_support	Part of the recommended public Chapter 4 order; shell/Slurm wrappers are support files for the adjacent numbered Python steps.
+legacy/chapter4/02e_build_kmer_regions_chunk.py	canonical_or_support	Part of the recommended public Chapter 4 order; shell/Slurm wrappers are support files for the adjacent numbered Python steps.
+legacy/chapter4/02e_submit_kmer_regions.sh	canonical_or_support	Part of the recommended public Chapter 4 order; shell/Slurm wrappers are support files for the adjacent numbered Python steps.
+legacy/chapter4/03_coverage_analysis.py	canonical_or_support	Part of the recommended public Chapter 4 order; shell/Slurm wrappers are support files for the adjacent numbered Python steps.
+legacy/chapter4/03_submit_dataweaver.sh	canonical_or_support	Part of the recommended public Chapter 4 order; shell/Slurm wrappers are support files for the adjacent numbered Python steps.
+legacy/chapter4/03a_build_external_pseudopairs_training_chunks.py	canonical_or_support	Part of the recommended public Chapter 4 order; shell/Slurm wrappers are support files for the adjacent numbered Python steps.
+legacy/chapter4/03a_prepare_pairs_and_counts_db.py	canonical_or_support	Part of the recommended public Chapter 4 order; shell/Slurm wrappers are support files for the adjacent numbered Python steps.
+legacy/chapter4/03b_dataweaver_chunk.py	canonical_or_support	Part of the recommended public Chapter 4 order; shell/Slurm wrappers are support files for the adjacent numbered Python steps.
+legacy/chapter4/03k_check_seqid_overlap.py	canonical_or_support	Part of the recommended public Chapter 4 order; shell/Slurm wrappers are support files for the adjacent numbered Python steps.
+legacy/chapter4/03k_kmer_chunk_sums.py	canonical_or_support	Part of the recommended public Chapter 4 order; shell/Slurm wrappers are support files for the adjacent numbered Python steps.
+legacy/chapter4/03k_reduce_kmer_only.py	historical_variant	Named variant of a nearby canonical step; keep for provenance and compare against the canonical command before reuse.
+legacy/chapter4/03k_submit_kmer_only.sh	historical_variant	Named variant of a nearby canonical step; keep for provenance and compare against the canonical command before reuse.
+legacy/chapter4/04_abundance_quantification.py	canonical_or_support	Part of the recommended public Chapter 4 order; shell/Slurm wrappers are support files for the adjacent numbered Python steps.
+legacy/chapter4/04_submit_stats_map.sh	canonical_or_support	Part of the recommended public Chapter 4 order; shell/Slurm wrappers are support files for the adjacent numbered Python steps.
+legacy/chapter4/04a_merge_pair_stats.py	canonical_or_support	Part of the recommended public Chapter 4 order; shell/Slurm wrappers are support files for the adjacent numbered Python steps.
+legacy/chapter4/04a_run_allfeatures.sh	canonical_or_support	Part of the recommended public Chapter 4 order; shell/Slurm wrappers are support files for the adjacent numbered Python steps.
+legacy/chapter4/04a_stat_chunk.py	canonical_or_support	Part of the recommended public Chapter 4 order; shell/Slurm wrappers are support files for the adjacent numbered Python steps.
+legacy/chapter4/04b_reduce_partials.py	canonical_or_support	Part of the recommended public Chapter 4 order; shell/Slurm wrappers are support files for the adjacent numbered Python steps.
+legacy/chapter4/04c_meta_summary.py	canonical_or_support	Part of the recommended public Chapter 4 order; shell/Slurm wrappers are support files for the adjacent numbered Python steps.
+legacy/chapter4/04d_pick_top_features.py	canonical_or_support	Part of the recommended public Chapter 4 order; shell/Slurm wrappers are support files for the adjacent numbered Python steps.
+legacy/chapter4/04e_shift_map_chunk.py	canonical_or_support	Part of the recommended public Chapter 4 order; shell/Slurm wrappers are support files for the adjacent numbered Python steps.
+legacy/chapter4/04e_submit_shift_map.sh	canonical_or_support	Part of the recommended public Chapter 4 order; shell/Slurm wrappers are support files for the adjacent numbered Python steps.
+legacy/chapter4/04f_reduce_shift_partials.py	canonical_or_support	Part of the recommended public Chapter 4 order; shell/Slurm wrappers are support files for the adjacent numbered Python steps.
+legacy/chapter4/04g_meta_shift_summary.py	canonical_or_support	Part of the recommended public Chapter 4 order; shell/Slurm wrappers are support files for the adjacent numbered Python steps.
+legacy/chapter4/04h_joint_rank_stratify.py	canonical_or_support	Part of the recommended public Chapter 4 order; shell/Slurm wrappers are support files for the adjacent numbered Python steps.
+legacy/chapter4/04k_map_kmer_stats_chunk.py	canonical_or_support	Part of the recommended public Chapter 4 order; shell/Slurm wrappers are support files for the adjacent numbered Python steps.
+legacy/chapter4/04k_reduce_kmer_stats_sqlite.py	canonical_or_support	Part of the recommended public Chapter 4 order; shell/Slurm wrappers are support files for the adjacent numbered Python steps.
+legacy/chapter4/04k_submit_kmer_stats.sh	canonical_or_support	Part of the recommended public Chapter 4 order; shell/Slurm wrappers are support files for the adjacent numbered Python steps.
+legacy/chapter4/05_bias_worker.py	canonical_or_support	Part of the recommended public Chapter 4 order; shell/Slurm wrappers are support files for the adjacent numbered Python steps.
+legacy/chapter4/05a_plot_joint_reports.py	canonical_or_support	Part of the recommended public Chapter 4 order; shell/Slurm wrappers are support files for the adjacent numbered Python steps.
+legacy/chapter4/05b_export_top_features.py	canonical_or_support	Part of the recommended public Chapter 4 order; shell/Slurm wrappers are support files for the adjacent numbered Python steps.
+legacy/chapter4/06_plot_sequence_bias.py	canonical_or_support	Part of the recommended public Chapter 4 order; shell/Slurm wrappers are support files for the adjacent numbered Python steps.
+legacy/chapter4/06a_prepare_ml_datasets.py	canonical_or_support	Part of the recommended public Chapter 4 order; shell/Slurm wrappers are support files for the adjacent numbered Python steps.
+legacy/chapter4/06b_train_rf.py	canonical_or_support	Part of the recommended public Chapter 4 order; shell/Slurm wrappers are support files for the adjacent numbered Python steps.
+legacy/chapter4/06c_prepare_ml_datasets_grid_v3.py	historical_variant	Named variant of a nearby canonical step; keep for provenance and compare against the canonical command before reuse.
+legacy/chapter4/06d_train_rf_weighted_v3.py	historical_variant	Named variant of a nearby canonical step; keep for provenance and compare against the canonical command before reuse.
+legacy/chapter4/06e_make_rf_tasks_v3.py	historical_variant	Named variant of a nearby canonical step; keep for provenance and compare against the canonical command before reuse.
+legacy/chapter4/06f_submit_rf_array_v3.sh	historical_variant	Named variant of a nearby canonical step; keep for provenance and compare against the canonical command before reuse.
+legacy/chapter4/06g_make_topbias_subsets.py	canonical_or_support	Part of the recommended public Chapter 4 order; shell/Slurm wrappers are support files for the adjacent numbered Python steps.
+legacy/chapter4/06h_audit_pairs_strict.py	canonical_or_support	Part of the recommended public Chapter 4 order; shell/Slurm wrappers are support files for the adjacent numbered Python steps.
+legacy/chapter4/06m_train_seqcnn1d.py	canonical_or_support	Part of the recommended public Chapter 4 order; shell/Slurm wrappers are support files for the adjacent numbered Python steps.
+legacy/chapter4/06n_submit_seqcnn_topbias.sh	canonical_or_support	Part of the recommended public Chapter 4 order; shell/Slurm wrappers are support files for the adjacent numbered Python steps.
+legacy/chapter4/06o_submit_cnn_topbias.sh	canonical_or_support	Part of the recommended public Chapter 4 order; shell/Slurm wrappers are support files for the adjacent numbered Python steps.
+legacy/chapter4/06p_submit_rf_kgrid_topbias.sh	historical_variant	Named variant of a nearby canonical step; keep for provenance and compare against the canonical command before reuse.
+legacy/chapter4/06q_build_real_kmer_only_all_topbias.py	historical_variant	Named variant of a nearby canonical step; keep for provenance and compare against the canonical command before reuse.
+legacy/chapter4/06r_submit_rf_real_kmer_only_all_topbias.sh	historical_variant	Named variant of a nearby canonical step; keep for provenance and compare against the canonical command before reuse.
+legacy/chapter4/06s_build_kmer_only_k1_5_topbias.py	historical_variant	Named variant of a nearby canonical step; keep for provenance and compare against the canonical command before reuse.
+legacy/chapter4/06t_train_xgb.py	canonical_or_support	Part of the recommended public Chapter 4 order; shell/Slurm wrappers are support files for the adjacent numbered Python steps.
+legacy/chapter4/06u_submit_xgb_topbias.sh	canonical_or_support	Part of the recommended public Chapter 4 order; shell/Slurm wrappers are support files for the adjacent numbered Python steps.
+legacy/chapter4/07_extract_sequences.py	canonical_or_support	Part of the recommended public Chapter 4 order; shell/Slurm wrappers are support files for the adjacent numbered Python steps.
+legacy/chapter4/07_merge_unique_pool.py	canonical_or_support	Part of the recommended public Chapter 4 order; shell/Slurm wrappers are support files for the adjacent numbered Python steps.
+legacy/chapter4/07a_collect_metrics_table.py	canonical_or_support	Part of the recommended public Chapter 4 order; shell/Slurm wrappers are support files for the adjacent numbered Python steps.
+legacy/chapter4/07a_collect_metrics_table_v3.py	historical_variant	Named variant of a nearby canonical step; keep for provenance and compare against the canonical command before reuse.
+legacy/chapter4/07b_bootstrap_ci_from_preds.py	canonical_or_support	Part of the recommended public Chapter 4 order; shell/Slurm wrappers are support files for the adjacent numbered Python steps.
+legacy/chapter4/07c_shap_xgb_tables.py	canonical_or_support	Part of the recommended public Chapter 4 order; shell/Slurm wrappers are support files for the adjacent numbered Python steps.
+legacy/chapter4/07c_shap_xgb_tables_v2.py	historical_variant	Named variant of a nearby canonical step; keep for provenance and compare against the canonical command before reuse.
+legacy/chapter4/07d_make_shap_tasks_xgb_topbias.py	canonical_or_support	Part of the recommended public Chapter 4 order; shell/Slurm wrappers are support files for the adjacent numbered Python steps.
+legacy/chapter4/07e_submit_shap_xgb_topbias.sh	canonical_or_support	Part of the recommended public Chapter 4 order; shell/Slurm wrappers are support files for the adjacent numbered Python steps.
+legacy/chapter4/07f_shap_rf_tables.py	canonical_or_support	Part of the recommended public Chapter 4 order; shell/Slurm wrappers are support files for the adjacent numbered Python steps.
+legacy/chapter4/07f_shap_rf_tables_v2.py	historical_variant	Named variant of a nearby canonical step; keep for provenance and compare against the canonical command before reuse.
+legacy/chapter4/07g_attr_seqcnn_ig_lenaware.py	historical_variant	Named variant of a nearby canonical step; keep for provenance and compare against the canonical command before reuse.
+legacy/chapter4/07g_attr_seqcnn_ig_tables.py	canonical_or_support	Part of the recommended public Chapter 4 order; shell/Slurm wrappers are support files for the adjacent numbered Python steps.
+legacy/chapter4/07h_make_explain_tasks_all.py	canonical_or_support	Part of the recommended public Chapter 4 order; shell/Slurm wrappers are support files for the adjacent numbered Python steps.
+legacy/chapter4/07i_submit_rf_shap_all.sh	canonical_or_support	Part of the recommended public Chapter 4 order; shell/Slurm wrappers are support files for the adjacent numbered Python steps.
+legacy/chapter4/07j_submit_seqcnn_ig_all.sh	canonical_or_support	Part of the recommended public Chapter 4 order; shell/Slurm wrappers are support files for the adjacent numbered Python steps.
+legacy/chapter4/07j_submit_seqcnn_ig_lenaware_all.sh	historical_variant	Named variant of a nearby canonical step; keep for provenance and compare against the canonical command before reuse.
+legacy/chapter4/07n_make_xgb_shap_tasks_tags.py	canonical_or_support	Part of the recommended public Chapter 4 order; shell/Slurm wrappers are support files for the adjacent numbered Python steps.
+legacy/chapter4/07o_submit_xgb_shap_array.sh	canonical_or_support	Part of the recommended public Chapter 4 order; shell/Slurm wrappers are support files for the adjacent numbered Python steps.
+legacy/chapter4/07o_submit_xgb_shap_array_top1p.sh	historical_variant	Named variant of a nearby canonical step; keep for provenance and compare against the canonical command before reuse.
+legacy/chapter4/07p_bootstrap_test_ci.py	canonical_or_support	Part of the recommended public Chapter 4 order; shell/Slurm wrappers are support files for the adjacent numbered Python steps.
+legacy/chapter4/07p_bootstrap_test_ci_stratified.py	historical_variant	Named variant of a nearby canonical step; keep for provenance and compare against the canonical command before reuse.
+legacy/chapter4/07p_bootstrap_test_ci_v2.py	historical_variant	Named variant of a nearby canonical step; keep for provenance and compare against the canonical command before reuse.
+legacy/chapter4/07r_make_master_ci_compat.py	historical_variant	Named variant of a nearby canonical step; keep for provenance and compare against the canonical command before reuse.
+legacy/chapter4/07r_make_rf_shap_tasks_tags.py	canonical_or_support	Part of the recommended public Chapter 4 order; shell/Slurm wrappers are support files for the adjacent numbered Python steps.
+legacy/chapter4/07s_submit_rf_shap_array_v2.sh	historical_variant	Named variant of a nearby canonical step; keep for provenance and compare against the canonical command before reuse.
+legacy/chapter4/08_feature_worker.py	canonical_or_support	Part of the recommended public Chapter 4 order; shell/Slurm wrappers are support files for the adjacent numbered Python steps.
+legacy/chapter4/08a_collect_plot_tables_v3_topbias.py	historical_variant	Named variant of a nearby canonical step; keep for provenance and compare against the canonical command before reuse.
+legacy/chapter4/08a_pack_results_for_writing.py	canonical_or_support	Part of the recommended public Chapter 4 order; shell/Slurm wrappers are support files for the adjacent numbered Python steps.
+legacy/chapter4/08b_export_dataset_overview.py	canonical_or_support	Part of the recommended public Chapter 4 order; shell/Slurm wrappers are support files for the adjacent numbered Python steps.
+legacy/chapter4/08b_make_A_tables.py	canonical_or_support	Part of the recommended public Chapter 4 order; shell/Slurm wrappers are support files for the adjacent numbered Python steps.
+legacy/chapter4/08c_export_true_counts_and_pair_manifest.py	canonical_or_support	Part of the recommended public Chapter 4 order; shell/Slurm wrappers are support files for the adjacent numbered Python steps.
+legacy/chapter4/08c_make_B_tables.py	canonical_or_support	Part of the recommended public Chapter 4 order; shell/Slurm wrappers are support files for the adjacent numbered Python steps.
+legacy/chapter4/08c_make_B_tables_v2.py	historical_variant	Named variant of a nearby canonical step; keep for provenance and compare against the canonical command before reuse.
+legacy/chapter4/08d_export_results_minipack_v3_topbias.py	historical_variant	Named variant of a nearby canonical step; keep for provenance and compare against the canonical command before reuse.
+legacy/chapter4/08e_make_C_tables_v3.py	historical_variant	Named variant of a nearby canonical step; keep for provenance and compare against the canonical command before reuse.
+legacy/chapter4/08f_make_D_pred_tables.py	canonical_or_support	Part of the recommended public Chapter 4 order; shell/Slurm wrappers are support files for the adjacent numbered Python steps.
+legacy/chapter4/08g_make_E_tables.py	canonical_or_support	Part of the recommended public Chapter 4 order; shell/Slurm wrappers are support files for the adjacent numbered Python steps.
+legacy/chapter4/08h_make_F_tables.py	canonical_or_support	Part of the recommended public Chapter 4 order; shell/Slurm wrappers are support files for the adjacent numbered Python steps.
+legacy/chapter4/09_merge_features.py	deprecated_legacy	Earlier exploratory script superseded by the numbered 00-08 workflow or retained only for thesis traceability.
+legacy/chapter4/09_plot_feature_summary.R	deprecated_legacy	Earlier exploratory script superseded by the numbered 00-08 workflow or retained only for thesis traceability.
+legacy/chapter4/09_plot_feature_summary_v2.R	historical_variant	Named variant of a nearby canonical step; keep for provenance and compare against the canonical command before reuse.
+legacy/chapter4/10_generate_final_csvs.py	deprecated_legacy	Earlier exploratory script superseded by the numbered 00-08 workflow or retained only for thesis traceability.
+legacy/chapter4/11_align_data_for_modeling.py	deprecated_legacy	Earlier exploratory script superseded by the numbered 00-08 workflow or retained only for thesis traceability.
+legacy/chapter4/12_augment_features.py	deprecated_legacy	Earlier exploratory script superseded by the numbered 00-08 workflow or retained only for thesis traceability.
+legacy/chapter4/13_train_baseline_model.py	deprecated_legacy	Earlier exploratory script superseded by the numbered 00-08 workflow or retained only for thesis traceability.
+legacy/chapter4/14_generate_high_k_features.py	historical_variant	Named variant of a nearby canonical step; keep for provenance and compare against the canonical command before reuse.
+legacy/chapter4/15_train_high_k_model.py	historical_variant	Named variant of a nearby canonical step; keep for provenance and compare against the canonical command before reuse.
+legacy/chapter4/16_shap_analysis_high_k.py	historical_variant	Named variant of a nearby canonical step; keep for provenance and compare against the canonical command before reuse.
+legacy/chapter4/16_shap_analysis_high_k_rf.py	historical_variant	Named variant of a nearby canonical step; keep for provenance and compare against the canonical command before reuse.
+legacy/chapter4/18_generate_deep_features.py	historical_variant	Named variant of a nearby canonical step; keep for provenance and compare against the canonical command before reuse.
+legacy/chapter4/19_train_deep_model.py	historical_variant	Named variant of a nearby canonical step; keep for provenance and compare against the canonical command before reuse.
+legacy/chapter4/20_shap_analysis_deep.py	historical_variant	Named variant of a nearby canonical step; keep for provenance and compare against the canonical command before reuse.
+legacy/chapter4/21_train_1d_cnn.py	deprecated_legacy	Earlier exploratory script superseded by the numbered 00-08 workflow or retained only for thesis traceability.
+legacy/chapter4/Mapping.py	deprecated_legacy	Earlier exploratory script superseded by the numbered 00-08 workflow or retained only for thesis traceability.
+legacy/chapter4/dump_env_versions.sh	utility	Helper, environment, export, or batch-submission wrapper.
+legacy/chapter4/export_topbias_bundle.py	utility	Helper, environment, export, or batch-submission wrapper.
+legacy/chapter4/ext00_scan_pcrbias_blayer.py	external_validation	External-validation branch; run only after the main Chapter 4 model-input artifacts exist.
+legacy/chapter4/ext01_build_pseudo_pairs.py	external_validation	External-validation branch; run only after the main Chapter 4 model-input artifacts exist.
+legacy/chapter4/ext02_build_external_training_chunks.py	external_validation	External-validation branch; run only after the main Chapter 4 model-input artifacts exist.
+legacy/chapter4/ext02e_submit_kmer_regions_external.sh	external_validation	External-validation branch; run only after the main Chapter 4 model-input artifacts exist.
+legacy/chapter4/ext03_submit_features_external.sh	external_validation	External-validation branch; run only after the main Chapter 4 model-input artifacts exist.
+legacy/chapter4/ext03a_audit_external_idmap.py	external_validation	External-validation branch; run only after the main Chapter 4 model-input artifacts exist.
+legacy/chapter4/ext04_audit_external_modelinputs.py	external_validation	External-validation branch; run only after the main Chapter 4 model-input artifacts exist.
+legacy/chapter4/ext04_compute_stats_external.py	external_validation	External-validation branch; run only after the main Chapter 4 model-input artifacts exist.
+legacy/chapter4/ext04_merge_features_external.py	external_validation	External-validation branch; run only after the main Chapter 4 model-input artifacts exist.
+legacy/chapter4/ext04_prepare_ml_datasets_external_topbias.py	external_validation	External-validation branch; run only after the main Chapter 4 model-input artifacts exist.
+legacy/chapter4/ext04_submit_agg_kmers_external.sh	external_validation	External-validation branch; run only after the main Chapter 4 model-input artifacts exist.
+legacy/chapter4/ext04b_audit_external_inputs.sh	external_validation	External-validation branch; run only after the main Chapter 4 model-input artifacts exist.
+legacy/chapter4/ext04c_split_kmer_only_by_k_external.py	external_validation	External-validation branch; run only after the main Chapter 4 model-input artifacts exist.
+legacy/chapter4/ext05_resplit_external_modelinputs.py	external_validation	External-validation branch; run only after the main Chapter 4 model-input artifacts exist.
+legacy/chapter4/ext05_select_kmers_external.py	external_validation	External-validation branch; run only after the main Chapter 4 model-input artifacts exist.
+legacy/chapter4/ext05_submit_kmer_regions_external.sh	external_validation	External-validation branch; run only after the main Chapter 4 model-input artifacts exist.
+legacy/chapter4/ext05_submit_train_external.sh	external_validation	External-validation branch; run only after the main Chapter 4 model-input artifacts exist.
+legacy/chapter4/ext05_train_model_external.py	external_validation	External-validation branch; run only after the main Chapter 4 model-input artifacts exist.
+legacy/chapter4/ext06_make_tasks_external.py	external_validation	External-validation branch; run only after the main Chapter 4 model-input artifacts exist.
+legacy/chapter4/ext06_patch_external_trainers.sh	external_validation	External-validation branch; run only after the main Chapter 4 model-input artifacts exist.
+legacy/chapter4/ext06_rf_array.slurm	external_validation	External-validation branch; run only after the main Chapter 4 model-input artifacts exist.
+legacy/chapter4/ext06_seqcnn_array.slurm	external_validation	External-validation branch; run only after the main Chapter 4 model-input artifacts exist.
+legacy/chapter4/ext06_submit_external_all.sh	external_validation	External-validation branch; run only after the main Chapter 4 model-input artifacts exist.
+legacy/chapter4/ext06_submit_train_external_resplit.sh	external_validation	External-validation branch; run only after the main Chapter 4 model-input artifacts exist.
+legacy/chapter4/ext06_xgb_array.slurm	external_validation	External-validation branch; run only after the main Chapter 4 model-input artifacts exist.
+legacy/chapter4/ext06a_train_rf_external_one.py	external_validation	External-validation branch; run only after the main Chapter 4 model-input artifacts exist.
+legacy/chapter4/ext06b_train_xgb_external_one.py	external_validation	External-validation branch; run only after the main Chapter 4 model-input artifacts exist.
+legacy/chapter4/ext06c_train_seqcnn_external_one.py	external_validation	External-validation branch; run only after the main Chapter 4 model-input artifacts exist.
+legacy/chapter4/ext06c_train_seqcnn_external_one_save_ts.py	external_validation	External-validation branch; run only after the main Chapter 4 model-input artifacts exist.
+legacy/chapter4/ext07_build_seqbank_external.py	external_validation	External-validation branch; run only after the main Chapter 4 model-input artifacts exist.
+legacy/chapter4/ext07_run_attr_external_one.py	external_validation	External-validation branch; run only after the main Chapter 4 model-input artifacts exist.
+legacy/chapter4/ext07_submit_attr_external_resplit_v1.sh	external_validation	External-validation branch; run only after the main Chapter 4 model-input artifacts exist.
+legacy/chapter4/ext07_submit_shap_ig_external_resplit.sh	external_validation	External-validation branch; run only after the main Chapter 4 model-input artifacts exist.
+legacy/chapter4/ext07a_audit_external_models.py	external_validation	External-validation branch; run only after the main Chapter 4 model-input artifacts exist.
+legacy/chapter4/ext07a_scan_missing_attr_external_resplit_v1.py	external_validation	External-validation branch; run only after the main Chapter 4 model-input artifacts exist.
+legacy/chapter4/ext07a_shap_rf_external_one.py	external_validation	External-validation branch; run only after the main Chapter 4 model-input artifacts exist.
+legacy/chapter4/ext07b_shap_xgb_external_one.py	external_validation	External-validation branch; run only after the main Chapter 4 model-input artifacts exist.
+legacy/chapter4/ext07b_submit_missing_attr_external_resplit_v1.sh	external_validation	External-validation branch; run only after the main Chapter 4 model-input artifacts exist.
+legacy/chapter4/ext07c_ig_seqcnn_external_one.py	external_validation	External-validation branch; run only after the main Chapter 4 model-input artifacts exist.
+legacy/chapter4/ext07c_pack_external_attr_keyfiles.sh	external_validation	External-validation branch; run only after the main Chapter 4 model-input artifacts exist.
+legacy/chapter4/ext08_pack_attr_results_external.sh	external_validation	External-validation branch; run only after the main Chapter 4 model-input artifacts exist.
+legacy/chapter4/ext08_pack_external_attr_results.sh	external_validation	External-validation branch; run only after the main Chapter 4 model-input artifacts exist.
+legacy/chapter4/run.slurm	utility	Helper, environment, export, or batch-submission wrapper.
+legacy/chapter4/samples_meta.tsv	example_input	Legacy example/input table retained for provenance.
+legacy/chapter4/submit_extraction.py	utility	Helper, environment, export, or batch-submission wrapper.
+legacy/chapter4/submit_features.py	utility	Helper, environment, export, or batch-submission wrapper.
+legacy/chapter4/submit_jobs.py	utility	Helper, environment, export, or batch-submission wrapper.

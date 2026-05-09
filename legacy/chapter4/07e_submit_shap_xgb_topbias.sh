@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-PROJECT="/datapool/zhangw/duwenchao/var/2511_PCR_Bias"
+PROJECT="/path/to/PCR_bias_chapter4"
 TASKS="$PROJECT/analysis_results/06_Models_v3_topbias/shap_xgb_tasks.tsv"
 
 # 资源：SHAP 比训练更吃内存些（取决于 explain_n）

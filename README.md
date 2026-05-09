@@ -7,7 +7,7 @@ This repository contains the thesis analysis scripts for two related workflows:
 - **Chapter 2–3 workflow**: sequencing-data preprocessing, abundance table construction, sequence annotation, species-label harmonization, threshold sensitivity analysis, sequence-feature extraction, and univariate statistics.
 - **Chapter 4 workflow**: PCR/non-PCR comparative analysis, sequence and k-mer feature extraction, paired statistical tests, machine-learning datasets, Random Forest/XGBoost/1D-CNN modeling, SHAP/integrated-gradient interpretation, external validation, and paper-ready table export.
 
-The current repository is a **public-release draft**. The original scripts are preserved under `legacy/` to keep the thesis analyses traceable. A later refactoring step should convert canonical scripts into a cleaner command-line package.
+The current repository is a **public-release draft**. The original scripts are preserved under `legacy/` to keep the thesis analyses traceable, but private server path defaults have been replaced with public placeholders. A later refactoring step should convert canonical scripts into a cleaner command-line package.
 
 ## Repository layout
 
@@ -18,7 +18,7 @@ The current repository is a **public-release draft**. The original scripts are p
 │   └── chapter4/          # Chapter 4 legacy workflow scripts
 ├── configs/               # Example YAML configuration
 ├── docs/                  # Audit report, pipeline notes, deployment notes, roadmap
-├── examples/              # Example metadata templates; no real sequencing data
+├── examples/              # Metadata templates and tiny synthetic parser fixtures
 ├── tools/                 # Repository audit and smoke-test utilities
 ├── .github/workflows/     # GitHub Actions syntax checks
 ├── environment.yml        # Conda environment draft
@@ -45,7 +45,7 @@ python -m pip install -r requirements.txt
 
 ```bash
 bash tools/smoke_test.sh
-python tools/audit_hardcoded_paths.py --legacy-mode report
+python tools/audit_hardcoded_paths.py
 python -m pytest
 ```
 
@@ -77,6 +77,19 @@ docs/CHAPTER4_PIPELINE.md
 
 The recommended public strategy is to treat `00*`–`08*` as the canonical internal order and keep `ext*` as external-validation scripts.
 
+
+## Synthetic fixture
+
+The repository includes artificial FASTQ/FASTA records under `examples/synthetic/` for lightweight validation only:
+
+```text
+examples/synthetic/samples_meta.synthetic.tsv
+examples/synthetic/raw_fastq/
+examples/synthetic/refs/
+```
+
+These files are not scientifically meaningful. Use them to test parser/schema wiring, then configure real local data paths in `configs/config.yaml`. See `docs/DATA_AVAILABILITY.md` for excluded data classes and reproducibility guidance.
+
 ## Configuration
 
 Copy the example configuration and edit paths for the target server:
@@ -87,12 +100,12 @@ cp configs/config.example.yaml configs/config.yaml
 
 Do not commit `configs/config.yaml`, private metadata, raw sequencing data, BAM files, trained models, logs, or large intermediate tables.
 
-## Current limitations
+## Public-release improvements
 
-- Legacy scripts still contain private server path defaults. These are retained only for provenance and are documented in `docs/HARDCODED_PATHS.tsv`.
-- Several scripts are historical alternatives (`_v2`, `_v3`, `topbias`, `resplit`, `external`). Canonical/deprecated status needs final scientific verification.
-- The public repository contains metadata examples but no raw data.
-- Dependency versions are inferred from script imports and should be pinned after recreating the final server environment.
+- Legacy private server paths have been replaced with public placeholders such as `/path/to/PCR_bias_chapter4` and `/path/to/chapter2_3_analysis`. Override them with command-line arguments or `configs/config.yaml` before running analyses.
+- Chapter 4 script status is documented in `docs/CHAPTER4_SCRIPT_STATUS.tsv`, with canonical/support scripts separated from historical variants and external-validation utilities.
+- A tiny synthetic, non-biological fixture is included in `examples/synthetic/` for parser and path-wiring checks; original large sequencing data remain intentionally excluded.
+- Python dependency versions are pinned in `requirements.txt`, and the Conda draft mirrors those pins where practical.
 
 ## License
 

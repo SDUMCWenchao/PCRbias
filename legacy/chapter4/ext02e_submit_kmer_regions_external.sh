@@ -2,7 +2,7 @@
 set -euo pipefail
 
 # ---------- args ----------
-PROJECT_DIR="/datapool/zhangw/duwenchao/var/2511_PCR_Bias/external_test"
+PROJECT_DIR="/path/to/PCR_bias_chapter4/external_test"
 HEAD_WIN=30
 TAIL_WIN=30
 MID_BINS=1

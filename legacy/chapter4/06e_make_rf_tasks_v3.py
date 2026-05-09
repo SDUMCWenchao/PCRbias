@@ -19,7 +19,7 @@ def has_dataset(d: Path) -> bool:
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--project_dir", default="/datapool/zhangw/duwenchao/var/2511_PCR_Bias")
+    ap.add_argument("--project_dir", default="/path/to/PCR_bias_chapter4")
     ap.add_argument("--inputs_root", default="analysis_results/05_ModelInputs_v3")
     ap.add_argument("--models_root", default="analysis_results/06_Models_v3")
     ap.add_argument("--out_tasks", default="analysis_results/06_Models_v3/rf_tasks.tsv")

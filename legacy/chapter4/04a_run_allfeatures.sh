@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-PROJECT="/datapool/zhangw/duwenchao/var/2511_PCR_Bias"
+PROJECT="/path/to/PCR_bias_chapter4"
 
 NO_CORR="${PROJECT}/analysis_results/04_Stats/pair_feature_corr.tsv.gz"
 NO_SHIFT="${PROJECT}/analysis_results/04_Stats/pair_feature_shift_top200.tsv.gz"

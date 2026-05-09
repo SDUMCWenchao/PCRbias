@@ -18,7 +18,7 @@ def load_features(path: Path) -> List[str]:
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--project_dir", default="/datapool/zhangw/duwenchao/var/2511_PCR_Bias")
+    ap.add_argument("--project_dir", default="/path/to/PCR_bias_chapter4")
     ap.add_argument("--chunk_name", required=True)  # chunk_0001
     ap.add_argument("--feature_list", required=True)  # top_features_200.txt
     ap.add_argument("--min_count", type=int, default=1, help="ignore weights < min_count")

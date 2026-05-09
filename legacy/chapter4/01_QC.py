@@ -3,7 +3,7 @@ import subprocess
 import glob
 
 # === 配置路径 ===
-base_dir = "/datapool/zhangw/duwenchao/var/2511_PCR_Bias/"
+base_dir = "/path/to/PCR_bias_chapter4/"
 raw_data_dir = os.path.join(base_dir, "raw_data")
 output_dir = os.path.join(base_dir, "analysis", "01_QC")
 

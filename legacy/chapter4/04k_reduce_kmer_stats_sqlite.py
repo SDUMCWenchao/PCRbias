@@ -30,7 +30,7 @@ def mean_var(den, s1, s2):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--project_dir", default="/datapool/zhangw/duwenchao/var/2511_PCR_Bias")
+    ap.add_argument("--project_dir", default="/path/to/PCR_bias_chapter4")
     ap.add_argument("--cleanup_db", action="store_true")
     args = ap.parse_args()
 

@@ -22,7 +22,7 @@ def norm_id(x: str) -> str:
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--project_dir", default="/datapool/zhangw/duwenchao/var/2511_PCR_Bias")
+    ap.add_argument("--project_dir", default="/path/to/PCR_bias_chapter4")
     ap.add_argument("--chunks_dir", default="analysis_results/03_DataWeaver/training_chunks")
     ap.add_argument("--samples_meta", default="scripts/samples_meta.tsv")
     ap.add_argument("--max_files", type=int, default=0, help="0 means all")

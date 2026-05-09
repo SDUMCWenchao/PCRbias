@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-PROJ="/datapool/zhangw/duwenchao/var/2511_PCR_Bias"
+PROJ="/path/to/PCR_bias_chapter4"
 EXT="${PROJ}/external_test"
 
 IN="${EXT}/analysis_results/05_ModelInputs_external_topbias_resplit_v1"

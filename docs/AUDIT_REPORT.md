@@ -43,14 +43,12 @@
 - Python 外部依赖初步识别：biopython, captum, joblib, matplotlib, numpy, orjson, pandas, pyfaidx, scikit-learn, scipy, seaborn, shap, statsmodels, torch, xgboost
 - 非 Python 命令依赖初步识别：fastp (2), cutadapt (5), blastn (2), makeblastdb (2), RNAfold (7), samtools (7), bwa (4), vsearch (2), qiime (1), seqkit (3), sbatch (34)
 
-## 4. 主要问题
+## 4. 公开版限制项整改状态
 
-1. **硬编码路径过多**：检测到 `/datapool` 绝对路径 126 处。公开前应统一改为 `--project-dir`、环境变量或 `config.yaml`。
-2. **历史版本较多**：存在 `_v2`、`_v3`、`external`、`topbias`、`resplit` 等多套历史版本。公开前应标注 canonical 版本。
-3. **依赖未正式锁定**：已生成 `requirements.txt` 和 `environment.yml` 草案，但仍需用实际服务器环境校正版本号。
-4. **缺少最小示例数据和测试**：目前只能做语法级 smoke test，无法验证科学输出。
-5. **Slurm 脚本仍绑定本机路径**：多数 `#SBATCH -o/-e`、`PROJECT`、`PROJECT_DIR` 写死服务器目录。
-6. **许可证未确定**：若目标是开源项目，必须加入真实开源许可证。
+1. **硬编码路径已清理**：旧版私有服务器路径已替换为公开占位路径；运行时应通过 `--project-dir`、环境变量或 `configs/config.yaml` 指向本地数据目录。
+2. **Chapter 4 脚本状态已标注**：脚本状态见 `docs/CHAPTER4_SCRIPT_STATUS.tsv`，区分 canonical/support、historical_variant、external_validation、utility 与 deprecated_legacy。
+3. **公开示例数据已补充**：`examples/synthetic/` 提供 toy FASTQ/FASTA/metadata，仅用于 parser 和路径连通性检查，真实 raw data 和大型中间文件仍不纳入 Git。
+4. **依赖基线已锁定**：`requirements.txt` 使用精确版本，`environment.yml` 对核心 Python/ML 依赖同步版本约束。
 
 ## 5. 已完成的整理
 

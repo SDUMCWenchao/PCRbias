@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+title: "PCR_bias: analysis scripts for PCR amplification bias in mammalian mitochondrial 12S/16S amplicon sequencing"
+message: "If you use this repository, please cite it using the metadata from this file."
+type: software
+authors:
+  - family-names: Du
+    given-names: WenGo
+repository-code: "https://github.com/SDUMCWenchao/PCR_bias"
+license: AGPL-3.0
+version: "0.1.0"
+date-released: "2026-05-09"
+keywords:
+  - PCR bias
+  - amplicon sequencing
+  - mitochondrial 12S
+  - mitochondrial 16S
+  - metabarcoding
+  - bioinformatics

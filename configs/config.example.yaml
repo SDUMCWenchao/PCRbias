@@ -1,0 +1,37 @@
+# Example configuration for PCR_bias.
+# Copy to configs/config.yaml and edit locally. Do not commit configs/config.yaml.
+
+project_name: PCR_bias
+repository: https://github.com/SDUMCWenchao/PCR_bias
+threads: 48
+memory: 500G
+
+paths:
+  project_root: /path/to/project_or_workdir
+  chapter2_3_base_dir: /path/to/chapter2_3_analysis
+  chapter4_base_dir: /path/to/chapter4_analysis
+  raw_fastq_dir: /path/to/raw_fastq
+  metadata_tsv: /path/to/sample_metadata.tsv
+  logs_dir: /path/to/logs
+  output_dir: /path/to/results
+
+tools:
+  python: python3
+  rscript: Rscript
+  rnafold: RNAfold
+  cutadapt: cutadapt
+  fastp: fastp
+  seqkit: seqkit
+  blastn: blastn
+  makeblastdb: makeblastdb
+  samtools: samtools
+  bwa: bwa
+  vsearch: vsearch
+
+slurm:
+  enabled: true
+  partition: null
+  account: null
+  cpus_per_task: 48
+  mem: 500G
+  time: null

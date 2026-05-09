@@ -1,0 +1,17 @@
+# Core Python dependencies inferred from uploaded scripts.
+# Pin exact versions after reproducing the thesis environment.
+biopython
+captum
+joblib
+matplotlib
+numpy
+orjson
+pandas
+pyfaidx
+scikit-learn
+scipy
+seaborn
+shap
+statsmodels
+torch
+xgboost

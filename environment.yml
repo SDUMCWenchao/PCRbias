@@ -1,0 +1,40 @@
+name: pcr-bias-pipeline
+channels:
+  - conda-forge
+  - bioconda
+  - pytorch
+  - defaults
+dependencies:
+  - python>=3.10,<3.12
+  - pandas
+  - numpy
+  - scipy
+  - scikit-learn
+  - statsmodels
+  - matplotlib
+  - seaborn
+  - joblib
+  - biopython
+  - pyfaidx
+  - orjson
+  - xgboost
+  - shap
+  - pytorch
+  - captum
+  - fastp
+  - cutadapt
+  - blast
+  - viennarna
+  - samtools
+  - bwa
+  - seqkit
+  - vsearch
+  - r-base
+  - r-ggplot2
+  - r-dplyr
+  - r-tidyr
+  - r-gridextra
+  - r-hexbin
+  - pip
+  - pip:
+      - -r requirements.txt

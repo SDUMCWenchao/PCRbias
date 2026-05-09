@@ -1,0 +1,25 @@
+[project]
+name = "pcr-bias"
+version = "0.1.0"
+description = "Legacy and refactored scripts for PCR amplification bias analysis in mammalian mitochondrial 12S/16S amplicon sequencing."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{name = "WenGo Du"}]
+license = {text = "AGPL-3.0"}
+keywords = ["PCR bias", "amplicon sequencing", "mitochondrial 12S", "mitochondrial 16S", "bioinformatics"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: GNU Affero General Public License v3",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+]
+
+[tool.ruff]
+line-length = 100
+exclude = ["legacy"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

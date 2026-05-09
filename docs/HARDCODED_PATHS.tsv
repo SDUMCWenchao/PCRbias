@@ -1,0 +1,127 @@
+path	line	content
+legacy/chapter2_3/00_setup_dirs.sh	3	BASE_DIR="${1:-/datapool/zhangw/duwenchao/var/seq_bias/chapter2_3_analysis}"
+legacy/chapter2_3/01_make_sample_metadata_template.py	11	["MD10_12","/datapool/zhangw/duwenchao/var/seq_bias/chapter2_3_analysis/01_raw_fastq/MD10_12.fq.gz","12S","MD10","inter_mix","inter","yes","REPLACE_12S_FWD","REPLACE_12S_REV","80","300","ten-species e
+legacy/chapter2_3/01_make_sample_metadata_template.py	12	["MP10_12","/datapool/zhangw/duwenchao/var/seq_bias/chapter2_3_analysis/01_raw_fastq/MP10_12.fq.gz","12S","MP10","inter_mix","inter","yes","REPLACE_12S_FWD","REPLACE_12S_REV","80","300","ten-species e
+legacy/chapter2_3/01_make_sample_metadata_template.py	13	["EaD10_16","/datapool/zhangw/duwenchao/var/seq_bias/chapter2_3_analysis/01_raw_fastq/EaD10_16.fq.gz","16S","EaD10","intra_mix","intra","yes","REPLACE_16S_FWD","REPLACE_16S_REV","80","300","Equus asin
+legacy/chapter2_3/01_make_sample_metadata_template.py	14	["Ea1_12","/datapool/zhangw/duwenchao/var/seq_bias/chapter2_3_analysis/01_raw_fastq/Ea1_12.fq.gz","12S","Ea1","single_ref","single","no","REPLACE_12S_FWD","REPLACE_12S_REV","80","300","single-individu
+legacy/chapter2_3/26_run_chapter3_pipeline_parallel.sh	3	BASE_DIR="${1:-/datapool/zhangw/duwenchao/var/seq_bias/chapter2_3_analysis}"
+legacy/chapter2_3/27_run_chapter3_pipeline_resume.sh	4	BASE_DIR="${1:-/datapool/zhangw/duwenchao/var/seq_bias/chapter2_3_analysis}"
+legacy/chapter2_3/unify_species_labels_inplace.py	124	ap.add_argument("--base-dir", required=True, help="e.g. /datapool/zhangw/duwenchao/var/seq_bias/chapter2_3_analysis")
+legacy/chapter4/07o_submit_xgb_shap_array.sh	4	PROJECT="/datapool/zhangw/duwenchao/var/2511_PCR_Bias"
+legacy/chapter4/ext03_submit_features_external.sh	4	PROJECT_DIR="/datapool/zhangw/duwenchao/var/2511_PCR_Bias"
+legacy/chapter4/Mapping.py	6	base_dir = "/datapool/zhangw/duwenchao/var/2511_PCR_Bias/"
+legacy/chapter4/Mapping.py	15	ref_fasta = "/datapool/zhangw/duwenchao/var/2511_PCR_Bias/refs/combined_mito_ref.fasta"
+legacy/chapter4/02d_make_kmer_union_vocab.py	19	ap.add_argument("--project_dir", default="/datapool/zhangw/duwenchao/var/2511_PCR_Bias")
+legacy/chapter4/ext02e_submit_kmer_regions_external.sh	5	PROJECT_DIR="/datapool/zhangw/duwenchao/var/2511_PCR_Bias/external_test"
+legacy/chapter4/ext06_xgb_array.slurm	4	#SBATCH -o /datapool/zhangw/duwenchao/var/2511_PCR_Bias/external_test/logs_slurm/%x_%A_%a.out
+legacy/chapter4/ext06_xgb_array.slurm	5	#SBATCH -e /datapool/zhangw/duwenchao/var/2511_PCR_Bias/external_test/logs_slurm/%x_%A_%a.err
+legacy/chapter4/ext06_xgb_array.slurm	23	python /datapool/zhangw/duwenchao/var/2511_PCR_Bias/scripts/ext06b_train_xgb_external_one.py \
+legacy/chapter4/02_mapping.slurm	12	BASE_DIR="/datapool/zhangw/duwenchao/var/2511_PCR_Bias"
+legacy/chapter4/ext07_submit_shap_ig_external_resplit.sh	4	PROJECT_ROOT="/datapool/zhangw/duwenchao/var/2511_PCR_Bias"
+legacy/chapter4/ext07_submit_shap_ig_external_resplit.sh	82	PROJECT_ROOT="/datapool/zhangw/duwenchao/var/2511_PCR_Bias"
+legacy/chapter4/submit_extraction.py	6	BASE_DIR = "/datapool/zhangw/duwenchao/var/2511_PCR_Bias"
+legacy/chapter4/07i_submit_rf_shap_all.sh	4	PROJECT="/datapool/zhangw/duwenchao/var/2511_PCR_Bias"
+legacy/chapter4/06g_make_topbias_subsets.py	62	ap.add_argument("--project_dir", default="/datapool/zhangw/duwenchao/var/2511_PCR_Bias")
+legacy/chapter4/20_shap_analysis_deep.py	12	BASE_DIR = "/datapool/zhangw/duwenchao/var/2511_PCR_Bias"
+legacy/chapter4/09_plot_feature_summary_v2.R	8	input_dir <- "/datapool/zhangw/duwenchao/var/2511_PCR_Bias/analysis/09_Feature_Summary"
+legacy/chapter4/09_plot_feature_summary_v2.R	9	output_dir <- "/datapool/zhangw/duwenchao/var/2511_PCR_Bias/analysis/09_Feature_Summary/plots_v2"
+legacy/chapter4/04k_map_kmer_stats_chunk.py	30	ap.add_argument("--project_dir", default="/datapool/zhangw/duwenchao/var/2511_PCR_Bias")
+legacy/chapter4/03k_reduce_kmer_only.py	38	ap.add_argument("--project_dir", default="/datapool/zhangw/duwenchao/var/2511_PCR_Bias")
+legacy/chapter4/21_train_1d_cnn.py	14	BASE_DIR = "/datapool/zhangw/duwenchao/var/2511_PCR_Bias"
+legacy/chapter4/06r_submit_rf_real_kmer_only_all_topbias.sh	4	PROJECT="/datapool/zhangw/duwenchao/var/2511_PCR_Bias"
+legacy/chapter4/07r_make_rf_shap_tasks_tags.py	9	ap.add_argument("--project_dir", default="/datapool/zhangw/duwenchao/var/2511_PCR_Bias")
+legacy/chapter4/04b_reduce_partials.py	43	ap.add_argument("--project_dir", default="/datapool/zhangw/duwenchao/var/2511_PCR_Bias")
+legacy/chapter4/03_coverage_analysis.py	10	BASE_DIR = "/datapool/zhangw/duwenchao/var/2511_PCR_Bias/"
+legacy/chapter4/04c_meta_summary.py	25	ap.add_argument("--project_dir", default="/datapool/zhangw/duwenchao/var/2511_PCR_Bias")
+legacy/chapter4/06n_submit_seqcnn_topbias.sh	4	PROJECT="/datapool/zhangw/duwenchao/var/2511_PCR_Bias"
+legacy/chapter4/09_plot_feature_summary.R	9	input_dir <- "/datapool/zhangw/duwenchao/var/2511_PCR_Bias/analysis/09_Feature_Summary"
+legacy/chapter4/09_plot_feature_summary.R	10	output_dir <- "/datapool/zhangw/duwenchao/var/2511_PCR_Bias/analysis/09_Feature_Summary/plots"
+legacy/chapter4/04f_reduce_shift_partials.py	27	ap.add_argument("--project_dir", default="/datapool/zhangw/duwenchao/var/2511_PCR_Bias")
+legacy/chapter4/04g_meta_shift_summary.py	11	ap.add_argument("--project_dir", default="/datapool/zhangw/duwenchao/var/2511_PCR_Bias")
+legacy/chapter4/04k_reduce_kmer_stats_sqlite.py	33	ap.add_argument("--project_dir", default="/datapool/zhangw/duwenchao/var/2511_PCR_Bias")
+legacy/chapter4/07s_submit_rf_shap_array_v2.sh	4	PROJECT="/datapool/zhangw/duwenchao/var/2511_PCR_Bias"
+legacy/chapter4/12_augment_features.py	10	BASE_DIR = "/datapool/zhangw/duwenchao/var/2511_PCR_Bias"
+legacy/chapter4/01b_build_global_counts_and_filter.py	65	ap.add_argument("--project_dir", default="/datapool/zhangw/duwenchao/var/2511_PCR_Bias")
+legacy/chapter4/submit_features.py	6	BASE_DIR = "/datapool/zhangw/duwenchao/var/2511_PCR_Bias"
+legacy/chapter4/06q_build_real_kmer_only_all_topbias.py	28	ap.add_argument("--project_dir", default="/datapool/zhangw/duwenchao/var/2511_PCR_Bias")
+legacy/chapter4/run.slurm	8	cd /datapool/zhangw/duwenchao/var/2511_PCR_Bias
+legacy/chapter4/07d_make_shap_tasks_xgb_topbias.py	9	ap.add_argument("--project_dir", default="/datapool/zhangw/duwenchao/var/2511_PCR_Bias")
+legacy/chapter4/16_shap_analysis_high_k_rf.py	12	BASE_DIR = "/datapool/zhangw/duwenchao/var/2511_PCR_Bias"
+legacy/chapter4/submit_jobs.py	6	BASE_DIR = "/datapool/zhangw/duwenchao/var/2511_PCR_Bias"
+legacy/chapter4/02e_submit_kmer_regions.sh	4	PROJECT_DIR="/datapool/zhangw/duwenchao/var/2511_PCR_Bias"
+legacy/chapter4/14_generate_high_k_features.py	9	BASE_DIR = "/datapool/zhangw/duwenchao/var/2511_PCR_Bias"
+legacy/chapter4/04e_shift_map_chunk.py	21	ap.add_argument("--project_dir", default="/datapool/zhangw/duwenchao/var/2511_PCR_Bias")
+legacy/chapter4/07e_submit_shap_xgb_topbias.sh	4	PROJECT="/datapool/zhangw/duwenchao/var/2511_PCR_Bias"
+legacy/chapter4/ext07b_submit_missing_attr_external_resplit_v1.sh	4	ROOT="/datapool/zhangw/duwenchao/var/2511_PCR_Bias"
+legacy/chapter4/ext07b_submit_missing_attr_external_resplit_v1.sh	6	PROJECT_DIR="/datapool/zhangw/duwenchao/var/2511_PCR_Bias/external_test"
+legacy/chapter4/02a_submit_features.sh	4	PROJECT_DIR="/datapool/zhangw/duwenchao/var/2511_PCR_Bias"
+legacy/chapter4/10_generate_final_csvs.py	7	BASE_DIR = "/datapool/zhangw/duwenchao/var/2511_PCR_Bias"
+legacy/chapter4/04_submit_stats_map.sh	4	PROJECT_DIR="/datapool/zhangw/duwenchao/var/2511_PCR_Bias"
+legacy/chapter4/01_QC.py	6	base_dir = "/datapool/zhangw/duwenchao/var/2511_PCR_Bias/"
+legacy/chapter4/06f_submit_rf_array_v3.sh	4	PROJECT="/datapool/zhangw/duwenchao/var/2511_PCR_Bias"
+legacy/chapter4/04_abundance_quantification.py	6	BASE_DIR = "/datapool/zhangw/duwenchao/var/2511_PCR_Bias/"
+legacy/chapter4/ext04b_audit_external_inputs.sh	3	ROOT="/datapool/zhangw/duwenchao/var/2511_PCR_Bias/external_test/analysis_results/05_ModelInputs_external_topbias_resplit_v1_resplit_v1"
+legacy/chapter4/ext06_patch_external_trainers.sh	4	ROOT="/datapool/zhangw/duwenchao/var/2511_PCR_Bias/scripts"
+legacy/chapter4/ext08_pack_attr_results_external.sh	4	MODELS_ROOT="${1:-/datapool/zhangw/duwenchao/var/2511_PCR_Bias/external_test/analysis_results/06_Models_external_topbias_v2_resplit_v1}"
+legacy/chapter4/ext08_pack_attr_results_external.sh	5	OUT_PREFIX="${2:-/datapool/zhangw/duwenchao/var/2511_PCR_Bias/external_test/_upload/external_attr_pack_$(date +%Y%m%d_%H%M%S)}"
+legacy/chapter4/02b1_submit_agg_kmers.sh	4	PROJECT_DIR="/datapool/zhangw/duwenchao/var/2511_PCR_Bias"
+legacy/chapter4/06m_train_seqcnn1d.py	137	ap.add_argument("--fasta", default="/datapool/zhangw/duwenchao/var/2511_PCR_Bias/analysis_results/01_Sequences/ALL_UNIQUE_SEQUENCES.fasta")
+legacy/chapter4/16_shap_analysis_high_k.py	11	BASE_DIR = "/datapool/zhangw/duwenchao/var/2511_PCR_Bias"
+legacy/chapter4/06o_submit_cnn_topbias.sh	4	PROJECT="/datapool/zhangw/duwenchao/var/2511_PCR_Bias"
+legacy/chapter4/06e_make_rf_tasks_v3.py	22	ap.add_argument("--project_dir", default="/datapool/zhangw/duwenchao/var/2511_PCR_Bias")
+legacy/chapter4/ext06_seqcnn_array.slurm	4	#SBATCH -o /datapool/zhangw/duwenchao/var/2511_PCR_Bias/external_test/logs_slurm/%x_%A_%a.out
+legacy/chapter4/ext06_seqcnn_array.slurm	5	#SBATCH -e /datapool/zhangw/duwenchao/var/2511_PCR_Bias/external_test/logs_slurm/%x_%A_%a.err
+legacy/chapter4/ext06_seqcnn_array.slurm	24	python /datapool/zhangw/duwenchao/var/2511_PCR_Bias/scripts/ext06c_train_seqcnn_external_one.py \
+legacy/chapter4/07j_submit_seqcnn_ig_lenaware_all.sh	4	PROJECT="/datapool/zhangw/duwenchao/var/2511_PCR_Bias"
+legacy/chapter4/ext04_submit_agg_kmers_external.sh	4	MAIN="/datapool/zhangw/duwenchao/var/2511_PCR_Bias"
+legacy/chapter4/02b_select_kmers.py	40	ap.add_argument("--project_dir", default="/datapool/zhangw/duwenchao/var/2511_PCR_Bias")
+legacy/chapter4/03k_check_seqid_overlap.py	5	PROJECT="/datapool/zhangw/duwenchao/var/2511_PCR_Bias"
+legacy/chapter4/ext05_submit_kmer_regions_external.sh	4	MAIN="/datapool/zhangw/duwenchao/var/2511_PCR_Bias"
+legacy/chapter4/07j_submit_seqcnn_ig_all.sh	4	PROJECT="/datapool/zhangw/duwenchao/var/2511_PCR_Bias"
+legacy/chapter4/06_plot_sequence_bias.py	9	BASE_DIR = "/datapool/zhangw/duwenchao/var/2511_PCR_Bias"
+legacy/chapter4/07o_submit_xgb_shap_array_top1p.sh	4	PROJECT="/datapool/zhangw/duwenchao/var/2511_PCR_Bias"
+legacy/chapter4/09_merge_features.py	6	BASE_DIR = "/datapool/zhangw/duwenchao/var/2511_PCR_Bias"
+legacy/chapter4/11_align_data_for_modeling.py	6	BASE_DIR = "/datapool/zhangw/duwenchao/var/2511_PCR_Bias"
+legacy/chapter4/03a_prepare_pairs_and_counts_db.py	90	ap.add_argument("--project_dir", default="/datapool/zhangw/duwenchao/var/2511_PCR_Bias")
+legacy/chapter4/ext08_pack_external_attr_results.sh	4	PROJECT_DIR="${1:-/datapool/zhangw/duwenchao/var/2511_PCR_Bias/external_test}"
+legacy/chapter4/03k_kmer_chunk_sums.py	90	ap.add_argument("--project_dir", default="/datapool/zhangw/duwenchao/var/2511_PCR_Bias")
+legacy/chapter4/ext06_submit_train_external_resplit.sh	4	PROJECT_ROOT="/datapool/zhangw/duwenchao/var/2511_PCR_Bias"
+legacy/chapter4/ext06_submit_train_external_resplit.sh	58	PROJECT_ROOT="/datapool/zhangw/duwenchao/var/2511_PCR_Bias"
+legacy/chapter4/15_train_high_k_model.py	13	BASE_DIR = "/datapool/zhangw/duwenchao/var/2511_PCR_Bias"
+legacy/chapter4/07p_bootstrap_test_ci.py	103	ap.add_argument("--models_root", default="/datapool/zhangw/duwenchao/var/2511_PCR_Bias/analysis_results/06_Models_v3_topbias")
+legacy/chapter4/04d_pick_top_features.py	10	ap.add_argument("--project_dir", default="/datapool/zhangw/duwenchao/var/2511_PCR_Bias")
+legacy/chapter4/07n_make_xgb_shap_tasks_tags.py	9	ap.add_argument("--project_dir", default="/datapool/zhangw/duwenchao/var/2511_PCR_Bias")
+legacy/chapter4/18_generate_deep_features.py	10	BASE_DIR = "/datapool/zhangw/duwenchao/var/2511_PCR_Bias"
+legacy/chapter4/06a_prepare_ml_datasets.py	248	ap.add_argument("--project_dir", default="/datapool/zhangw/duwenchao/var/2511_PCR_Bias")
+legacy/chapter4/04a_run_allfeatures.sh	4	PROJECT="/datapool/zhangw/duwenchao/var/2511_PCR_Bias"
+legacy/chapter4/19_train_deep_model.py	11	BASE_DIR = "/datapool/zhangw/duwenchao/var/2511_PCR_Bias"
+legacy/chapter4/13_train_baseline_model.py	13	BASE_DIR = "/datapool/zhangw/duwenchao/var/2511_PCR_Bias"
+legacy/chapter4/04e_submit_shift_map.sh	4	PROJECT_DIR="/datapool/zhangw/duwenchao/var/2511_PCR_Bias"
+legacy/chapter4/03_submit_dataweaver.sh	4	PROJECT_DIR="/datapool/zhangw/duwenchao/var/2511_PCR_Bias"
+legacy/chapter4/ext07_submit_attr_external_resplit_v1.sh	5	PROJECT_DIR="/datapool/zhangw/duwenchao/var/2511_PCR_Bias/external_test"
+legacy/chapter4/ext07_submit_attr_external_resplit_v1.sh	33	ROOT="/datapool/zhangw/duwenchao/var/2511_PCR_Bias"
+legacy/chapter4/ext07_submit_attr_external_resplit_v1.sh	127	ROOT="/datapool/zhangw/duwenchao/var/2511_PCR_Bias"
+legacy/chapter4/ext07_submit_attr_external_resplit_v1.sh	163	ROOT="/datapool/zhangw/duwenchao/var/2511_PCR_Bias"
+legacy/chapter4/00_trim_primers.py	6	BASE_DIR = "/datapool/zhangw/duwenchao/var/2511_PCR_Bias"
+legacy/chapter4/04h_joint_rank_stratify.py	192	ap.add_argument("--project_dir", default="/datapool/zhangw/duwenchao/var/2511_PCR_Bias")
+legacy/chapter4/07a_collect_metrics_table.py	22	ap.add_argument("--project_dir", default="/datapool/zhangw/duwenchao/var/2511_PCR_Bias")
+legacy/chapter4/ext06_rf_array.slurm	4	#SBATCH -o /datapool/zhangw/duwenchao/var/2511_PCR_Bias/external_test/logs_slurm/%x_%A_%a.out
+legacy/chapter4/ext06_rf_array.slurm	5	#SBATCH -e /datapool/zhangw/duwenchao/var/2511_PCR_Bias/external_test/logs_slurm/%x_%A_%a.err
+legacy/chapter4/ext06_rf_array.slurm	23	python /datapool/zhangw/duwenchao/var/2511_PCR_Bias/scripts/ext06a_train_rf_external_one.py \
+legacy/chapter4/07a_collect_metrics_table_v3.py	36	ap.add_argument("--project_dir", default="/datapool/zhangw/duwenchao/var/2511_PCR_Bias")
+legacy/chapter4/06s_build_kmer_only_k1_5_topbias.py	138	ap.add_argument("--project_dir", default="/datapool/zhangw/duwenchao/var/2511_PCR_Bias")
+legacy/chapter4/04a_stat_chunk.py	41	ap.add_argument("--project_dir", default="/datapool/zhangw/duwenchao/var/2511_PCR_Bias")
+legacy/chapter4/ext07c_pack_external_attr_keyfiles.sh	4	PROJECT_DIR="/datapool/zhangw/duwenchao/var/2511_PCR_Bias/external_test"
+legacy/chapter4/06p_submit_rf_kgrid_topbias.sh	4	PROJECT="/datapool/zhangw/duwenchao/var/2511_PCR_Bias"
+legacy/chapter4/04k_submit_kmer_stats.sh	4	PROJECT_DIR="/datapool/zhangw/duwenchao/var/2511_PCR_Bias"
+legacy/chapter4/06c_prepare_ml_datasets_grid_v3.py	374	ap.add_argument("--project_dir", default="/datapool/zhangw/duwenchao/var/2511_PCR_Bias")
+legacy/chapter4/02c_expand_kmers.py	64	ap.add_argument("--project_dir", default="/datapool/zhangw/duwenchao/var/2511_PCR_Bias")
+legacy/chapter4/06u_submit_xgb_topbias.sh	4	PROJECT="/datapool/zhangw/duwenchao/var/2511_PCR_Bias"
+legacy/chapter4/ext05_submit_train_external.sh	4	MAIN="/datapool/zhangw/duwenchao/var/2511_PCR_Bias"
+legacy/chapter4/07_merge_unique_pool.py	5	BASE_DIR = "/datapool/zhangw/duwenchao/var/2511_PCR_Bias"
+legacy/chapter4/07h_make_explain_tasks_all.py	9	ap.add_argument("--project_dir", default="/datapool/zhangw/duwenchao/var/2511_PCR_Bias")
+legacy/chapter4/06h_audit_pairs_strict.py	25	ap.add_argument("--project_dir", default="/datapool/zhangw/duwenchao/var/2511_PCR_Bias")
+legacy/chapter4/ext06_submit_external_all.sh	4	PROJ="/datapool/zhangw/duwenchao/var/2511_PCR_Bias"
+legacy/chapter4/03b_dataweaver_chunk.py	65	ap.add_argument("--project_dir", default="/datapool/zhangw/duwenchao/var/2511_PCR_Bias")
+legacy/chapter4/02b2_select_kmers_from_agg.py	27	ap.add_argument("--project_dir", default="/datapool/zhangw/duwenchao/var/2511_PCR_Bias")
+legacy/chapter4/03k_submit_kmer_only.sh	4	PROJECT_DIR="/datapool/zhangw/duwenchao/var/2511_PCR_Bias"

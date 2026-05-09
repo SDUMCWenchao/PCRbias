@@ -1,0 +1,71 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# R
+.Rhistory
+.RData
+.Rproj.user/
+
+# Environments
+.env
+.venv/
+venv/
+conda-env/
+
+# Logs and Slurm outputs
+*.log
+*.out
+*.err
+slurm-*.out
+logs/
+logs_slurm/
+
+# Large/generated analysis data
+raw_data/
+raw_fastq/
+*.fastq
+*.fq
+*.fastq.gz
+*.fq.gz
+*.bam
+*.bai
+*.sam
+*.cram
+*.fasta.gz
+*.fa.gz
+analysis/
+analysis_results/
+results/
+outputs/
+figures/
+models/
+*.pkl
+*.joblib
+*.pt
+*.pth
+*.npz
+*.npy
+
+# Local configs and private metadata
+config.yaml
+*.local.yaml
+private/
+secrets/
+
+# Local user files
+.DS_Store
+Thumbs.db
+configs/config.yaml
+*.tmp
+*.bak
+
+# Large archives
+*.tar
+*.tar.gz
+*.zip
+*.7z

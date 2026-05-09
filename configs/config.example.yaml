@@ -2,7 +2,7 @@
 # Copy to configs/config.yaml and edit locally. Do not commit configs/config.yaml.
 
 project_name: PCR_bias
-repository: https://github.com/SDUMCWenchao/PCR_bias
+repository: https://github.com/SDUMCWenchao/PCRbias
 threads: 48
 memory: 500G
 

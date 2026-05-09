@@ -33,7 +33,7 @@ def parse_path(p: Path):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--project_dir", default="/datapool/zhangw/duwenchao/var/2511_PCR_Bias")
+    ap.add_argument("--project_dir", default="/path/to/PCR_bias_chapter4")
     ap.add_argument("--models_root", default="analysis_results/06_Models_v3_topbias")
     ap.add_argument("--out_tsv", default="analysis_results/06_Models_v3_topbias/metrics_detail.tsv")
     ap.add_argument("--out_summary_tsv", default="analysis_results/06_Models_v3_topbias/metrics_summary.tsv")

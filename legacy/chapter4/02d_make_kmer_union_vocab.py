@@ -16,7 +16,7 @@ from pathlib import Path
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--project_dir", default="/datapool/zhangw/duwenchao/var/2511_PCR_Bias")
+    ap.add_argument("--project_dir", default="/path/to/PCR_bias_chapter4")
     ap.add_argument("--in_vocab", default=None)
     ap.add_argument("--min_k", type=int, default=6)
     ap.add_argument("--max_k", type=int, default=8)

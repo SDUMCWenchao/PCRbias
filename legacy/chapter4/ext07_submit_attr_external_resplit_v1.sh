@@ -2,7 +2,7 @@
 set -euo pipefail
 
 # ====== user configurable ======
-PROJECT_DIR="/datapool/zhangw/duwenchao/var/2511_PCR_Bias/external_test"
+PROJECT_DIR="/path/to/PCR_bias_chapter4/external_test"
 INPUTS_ROOT="$PROJECT_DIR/analysis_results/05_ModelInputs_external_topbias_resplit_v1"
 MODELS_ROOT="$PROJECT_DIR/analysis_results/06_Models_external_topbias_v2_resplit_v1"
 
@@ -30,7 +30,7 @@ SEQ_EPOCHS=25
 SEQ_BS=256
 # ==============================
 
-ROOT="/datapool/zhangw/duwenchao/var/2511_PCR_Bias"
+ROOT="/path/to/PCR_bias_chapter4"
 TASKDIR="$PROJECT_DIR/analysis_results/_tasks_attr_resplit_v1"
 mkdir -p "$TASKDIR"
 
@@ -124,7 +124,7 @@ cat > "$SLURM_SEQ" <<'SLURM'
 #SBATCH -e %x_%A_%a.err
 
 set -euo pipefail
-ROOT="/datapool/zhangw/duwenchao/var/2511_PCR_Bias"
+ROOT="/path/to/PCR_bias_chapter4"
 
 : "${TASKS_TSV:?need TASKS_TSV}"
 : "${OFFSET:?need OFFSET}"
@@ -160,7 +160,7 @@ cat > "$SLURM_ATTR" <<SLURM
 #SBATCH -e %x_%A_%a.err
 
 set -euo pipefail
-ROOT="/datapool/zhangw/duwenchao/var/2511_PCR_Bias"
+ROOT="/path/to/PCR_bias_chapter4"
 
 : "\${TASKS_TSV:?need TASKS_TSV}"
 : "\${OFFSET:?need OFFSET}"

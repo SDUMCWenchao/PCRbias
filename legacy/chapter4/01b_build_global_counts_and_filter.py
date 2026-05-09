@@ -62,7 +62,7 @@ def fasta_iter(path: Path):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--project_dir", default="/datapool/zhangw/duwenchao/var/2511_PCR_Bias")
+    ap.add_argument("--project_dir", default="/path/to/PCR_bias_chapter4")
     ap.add_argument("--seq_dir", default=None, help="analysis_results/01_Sequences (default under project)")
     ap.add_argument("--min_count", type=int, default=2)
     ap.add_argument("--force", action="store_true")

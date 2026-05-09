@@ -8,7 +8,7 @@ from pathlib import Path
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--project_dir", default="/datapool/zhangw/duwenchao/var/2511_PCR_Bias")
+    ap.add_argument("--project_dir", default="/path/to/PCR_bias_chapter4")
     ap.add_argument("--in_name", default="pair_feature_shift_top200.tsv.gz")
     ap.add_argument("--out_name", default="meta_feature_shift_top200.tsv")
     args = ap.parse_args()

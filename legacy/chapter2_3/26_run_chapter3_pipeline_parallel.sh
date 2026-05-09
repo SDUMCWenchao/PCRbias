@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 set -euo pipefail
-BASE_DIR="${1:-/datapool/zhangw/duwenchao/var/seq_bias/chapter2_3_analysis}"
+BASE_DIR="${1:-/path/to/chapter2_3_analysis}"
 THREADS="${2:-${SLURM_CPUS_PER_TASK:-48}}"
 
 REGION_DIR="${BASE_DIR}/04_features/chapter3/regions"

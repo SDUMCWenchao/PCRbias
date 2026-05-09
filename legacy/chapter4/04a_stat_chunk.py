@@ -38,7 +38,7 @@ def is_float(s: str) -> bool:
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--project_dir", default="/datapool/zhangw/duwenchao/var/2511_PCR_Bias")
+    ap.add_argument("--project_dir", default="/path/to/PCR_bias_chapter4")
     ap.add_argument("--chunk_name", required=True, help="chunk_0001")
     ap.add_argument("--min_weight", type=float, default=1.0, help="drop rows with w < min_weight")
     args = ap.parse_args()

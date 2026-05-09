@@ -5,7 +5,7 @@
 #SBATCH --mem=500G
 
 
-cd /datapool/zhangw/duwenchao/var/2511_PCR_Bias
+cd /path/to/PCR_bias_chapter4
 
 python scripts/06a_prepare_ml_datasets.py \
   --max_train 2000000 --max_val 250000 --max_test 250000 \

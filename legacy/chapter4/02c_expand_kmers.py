@@ -61,7 +61,7 @@ def load_vocab(vocab_path: Path) -> Dict[Tuple[str,int,str], str]:
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--project_dir", default="/datapool/zhangw/duwenchao/var/2511_PCR_Bias")
+    ap.add_argument("--project_dir", default="/path/to/PCR_bias_chapter4")
     ap.add_argument("--feature_dir", default=None)
     ap.add_argument("--chunk_name", default=None, help="If set, only expand this chunk (e.g., chunk_0001)")
     args = ap.parse_args()

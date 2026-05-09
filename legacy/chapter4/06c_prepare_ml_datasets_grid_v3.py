@@ -371,7 +371,7 @@ def save_variant(out_dir: Path, Xtr, Xva, Xte, ytr, yva, yte, wtr, wva, wte,
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--project_dir", default="/datapool/zhangw/duwenchao/var/2511_PCR_Bias")
+    ap.add_argument("--project_dir", default="/path/to/PCR_bias_chapter4")
     ap.add_argument("--training_chunks", default="analysis_results/03_DataWeaver/training_chunks")
     ap.add_argument("--seq_fasta", default="analysis_results/01_Sequences/ALL_UNIQUE_SEQUENCES.fasta")
     ap.add_argument("--samples_meta", default="scripts/samples_meta.tsv")

@@ -134,7 +134,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--dataset_dir", required=True)
     ap.add_argument("--out_dir", required=True)
-    ap.add_argument("--fasta", default="/datapool/zhangw/duwenchao/var/2511_PCR_Bias/analysis_results/01_Sequences/ALL_UNIQUE_SEQUENCES.fasta")
+    ap.add_argument("--fasta", default="/path/to/PCR_bias_chapter4/analysis_results/01_Sequences/ALL_UNIQUE_SEQUENCES.fasta")
     ap.add_argument("--max_len", type=int, default=500)
     ap.add_argument("--y_clip", type=float, default=6.0)
     ap.add_argument("--use_pyfaidx", action="store_true")

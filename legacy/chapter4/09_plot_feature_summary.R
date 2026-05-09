@@ -6,8 +6,8 @@ library(gridExtra)
 # === 配置路径 ===
 # 如果在服务器运行，请修改为服务器绝对路径
 # 如果在本地运行，请修改为本地路径
-input_dir <- "/datapool/zhangw/duwenchao/var/2511_PCR_Bias/analysis/09_Feature_Summary"
-output_dir <- "/datapool/zhangw/duwenchao/var/2511_PCR_Bias/analysis/09_Feature_Summary/plots"
+input_dir <- "/path/to/PCR_bias_chapter4/analysis/09_Feature_Summary"
+output_dir <- "/path/to/PCR_bias_chapter4/analysis/09_Feature_Summary/plots"
 
 if (!dir.exists(output_dir)) dir.create(output_dir)
 

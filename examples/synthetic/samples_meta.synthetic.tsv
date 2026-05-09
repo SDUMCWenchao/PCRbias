@@ -1,0 +1,3 @@
+sample_id	fastq_path	marker	condition	replicate	notes
+synthetic_pcr	examples/synthetic/raw_fastq/synthetic_pcr.fastq	12S	PCR	1	Toy synthetic PCR reads for parser checks
+synthetic_nonpcr	examples/synthetic/raw_fastq/synthetic_nonpcr.fastq	12S	nonPCR	1	Toy synthetic non-PCR reads for parser checks

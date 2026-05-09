@@ -100,7 +100,7 @@ def summarize(boot_list):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--models_root", default="/datapool/zhangw/duwenchao/var/2511_PCR_Bias/analysis_results/06_Models_v3_topbias")
+    ap.add_argument("--models_root", default="/path/to/PCR_bias_chapter4/analysis_results/06_Models_v3_topbias")
     ap.add_argument("--out_tsv", required=True)
     ap.add_argument("--B", type=int, default=1000)
     ap.add_argument("--seed", type=int, default=1)

@@ -189,7 +189,7 @@ def infer_effect_from_row(row: Dict[str, str]) -> Optional[float]:
 
 def main() -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--project_dir", default="/datapool/zhangw/duwenchao/var/2511_PCR_Bias")
+    ap.add_argument("--project_dir", default="/path/to/PCR_bias_chapter4")
 
     ap.add_argument("--pairs_tsv", default=None,
                     help="default: analysis_results/03_DataWeaver/pairs.tsv")

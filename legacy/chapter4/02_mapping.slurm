@@ -9,7 +9,7 @@
 #SBATCH --array=2-23%16              # 处理第2到23行，同时最多运行16个任务 (16*4=64核)
 
 # === 1. 定义路径 ===
-BASE_DIR="/datapool/zhangw/duwenchao/var/2511_PCR_Bias"
+BASE_DIR="/path/to/PCR_bias_chapter4"
 RAW_DIR="${BASE_DIR}/raw_data"
 REF_DIR="${BASE_DIR}/refs"
 OUT_DIR="${BASE_DIR}/analysis/02_Mapping"

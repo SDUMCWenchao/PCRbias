@@ -3,7 +3,7 @@ import pandas as pd
 import subprocess
 
 # === 配置 ===
-BASE_DIR = "/datapool/zhangw/duwenchao/var/2511_PCR_Bias"
+BASE_DIR = "/path/to/PCR_bias_chapter4"
 RAW_DIR = os.path.join(BASE_DIR, "raw_data")
 # 新的输出目录
 OUT_DIR = os.path.join(BASE_DIR, "raw_data_trimmed")

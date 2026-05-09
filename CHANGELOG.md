@@ -9,7 +9,8 @@
 - Added audit utilities for script inventory and hard-coded path detection.
 - Added documentation for Chapter 2–3 and Chapter 4 workflows.
 
-### Known limitations
-- Legacy scripts still contain hard-coded private/server paths for provenance.
-- Public release does not include raw sequencing data or large intermediates.
-- Some Chapter 4 script variants still require canonical/deprecated labeling.
+### Changed
+- Replaced private server path defaults with public placeholder paths.
+- Added Chapter 4 script status labels for canonical/support scripts, historical variants, external-validation utilities, and deprecated legacy files.
+- Added a tiny synthetic fixture for parser/path-wiring checks while keeping real raw data and large intermediates excluded.
+- Pinned the Python dependency baseline and mirrored core pins in the Conda environment draft.

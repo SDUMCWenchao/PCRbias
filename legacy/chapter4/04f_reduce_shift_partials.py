@@ -24,7 +24,7 @@ def w_mean_var(w, s1, s2):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--project_dir", default="/datapool/zhangw/duwenchao/var/2511_PCR_Bias")
+    ap.add_argument("--project_dir", default="/path/to/PCR_bias_chapter4")
     ap.add_argument("--out_name", default="pair_feature_shift_top200.tsv.gz")
     args = ap.parse_args()
 

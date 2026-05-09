@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-ROOT="/datapool/zhangw/duwenchao/var/2511_PCR_Bias/scripts"
+ROOT="/path/to/PCR_bias_chapter4/scripts"
 
 ############################
 # RF (robust empty splits + silent corr)

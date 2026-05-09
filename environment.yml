@@ -6,21 +6,21 @@ channels:
   - defaults
 dependencies:
   - python>=3.10,<3.12
-  - pandas
-  - numpy
-  - scipy
-  - scikit-learn
-  - statsmodels
-  - matplotlib
-  - seaborn
-  - joblib
-  - biopython
-  - pyfaidx
-  - orjson
-  - xgboost
-  - shap
-  - pytorch
-  - captum
+  - pandas=2.2.3
+  - numpy=1.26.4
+  - scipy=1.13.1
+  - scikit-learn=1.5.2
+  - statsmodels=0.14.4
+  - matplotlib=3.9.4
+  - seaborn=0.13.2
+  - joblib=1.4.2
+  - biopython=1.85
+  - pyfaidx=0.8.1.3
+  - orjson=3.10.15
+  - xgboost=2.1.4
+  - shap=0.46.0
+  - pytorch=2.5.1
+  - captum=0.7.0
   - fastp
   - cutadapt
   - blast

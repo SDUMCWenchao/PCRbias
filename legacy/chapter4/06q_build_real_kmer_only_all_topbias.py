@@ -25,7 +25,7 @@ def read_feat_names(ds: Path):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--project_dir", default="/datapool/zhangw/duwenchao/var/2511_PCR_Bias")
+    ap.add_argument("--project_dir", default="/path/to/PCR_bias_chapter4")
     ap.add_argument("--inputs_root", default="analysis_results/05_ModelInputs_v3_topbias")
     ap.add_argument("--tags", default="top1p,top0p5p,top0p1p")
     ap.add_argument("--out_name", default="real_kmer_only_all")

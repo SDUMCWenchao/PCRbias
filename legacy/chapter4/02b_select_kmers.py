@@ -37,7 +37,7 @@ def read_tsv_gz(path: Path):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--project_dir", default="/datapool/zhangw/duwenchao/var/2511_PCR_Bias")
+    ap.add_argument("--project_dir", default="/path/to/PCR_bias_chapter4")
     ap.add_argument("--feature_dir", default=None, help="analysis_results/02_Features (default under project)")
     ap.add_argument("--min_df", type=int, default=10, help="min document frequency per k-mer")
     ap.add_argument("--max_per_k", type=int, default=2000, help="max k-mers kept per (scope,k)")

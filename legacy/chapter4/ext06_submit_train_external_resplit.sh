@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-PROJECT_ROOT="/datapool/zhangw/duwenchao/var/2511_PCR_Bias"
+PROJECT_ROOT="/path/to/PCR_bias_chapter4"
 INPUTS_ROOT="$PROJECT_ROOT/external_test/analysis_results/05_ModelInputs_external_topbias_resplit_v1_resplit_v1_resplit_v1"
 MODELS_ROOT="$PROJECT_ROOT/external_test/analysis_results/06_Models_external_topbias_v2_resplit_v1_resplit_v1_resplit_v1"
 
@@ -55,7 +55,7 @@ cat > "$SLURM_FILE" <<'SLURM'
 
 set -euo pipefail
 
-PROJECT_ROOT="/datapool/zhangw/duwenchao/var/2511_PCR_Bias"
+PROJECT_ROOT="/path/to/PCR_bias_chapter4"
 TASKS_TSV="$PROJECT_ROOT/external_test/analysis_results/_tasks_ext06_resplit/tasks.tsv"
 
 line=$(awk -v n=$SLURM_ARRAY_TASK_ID 'NR==n+1{print; exit}' "$TASKS_TSV")

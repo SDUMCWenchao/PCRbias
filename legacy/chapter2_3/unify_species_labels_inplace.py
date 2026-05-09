@@ -121,7 +121,7 @@ def process_one_file(path: Path, columns, dry_run=False, backup=False):
 
 def main():
     ap = argparse.ArgumentParser(description="Check and unify species/target labels across Chapter 2 files, overwrite originals in place.")
-    ap.add_argument("--base-dir", required=True, help="e.g. /datapool/zhangw/duwenchao/var/seq_bias/chapter2_3_analysis")
+    ap.add_argument("--base-dir", required=True, help="e.g. /path/to/chapter2_3_analysis")
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--backup", action="store_true")
     args = ap.parse_args()

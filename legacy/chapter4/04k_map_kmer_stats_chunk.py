@@ -27,7 +27,7 @@ def read_kmer_posbins(fp: Path):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--project_dir", default="/datapool/zhangw/duwenchao/var/2511_PCR_Bias")
+    ap.add_argument("--project_dir", default="/path/to/PCR_bias_chapter4")
     ap.add_argument("--chunk_name", required=True)
     ap.add_argument("--x_mode", choices=["count","presence"], default="count")
     args = ap.parse_args()

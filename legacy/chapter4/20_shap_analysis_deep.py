@@ -9,7 +9,7 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import train_test_split
 
 # === 配置 ===
-BASE_DIR = "/datapool/zhangw/duwenchao/var/2511_PCR_Bias"
+BASE_DIR = "/path/to/PCR_bias_chapter4"
 # 修改输入为 Deep 数据
 INPUT_DIR = os.path.join(BASE_DIR, "analysis/10_Modeling_Data_Deep")
 OUTPUT_DIR = os.path.join(BASE_DIR, "analysis/16_SHAP_Analysis_Deep")

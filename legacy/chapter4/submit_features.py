@@ -3,7 +3,7 @@ import subprocess
 import shutil
 
 # === 配置 ===
-BASE_DIR = "/datapool/zhangw/duwenchao/var/2511_PCR_Bias"
+BASE_DIR = "/path/to/PCR_bias_chapter4"
 INPUT_FASTA = os.path.join(BASE_DIR, "analysis/07_Seq_Extraction/ALL_UNIQUE_SEQUENCES.fasta")
 WORK_DIR = os.path.join(BASE_DIR, "analysis/08_Features")
 SPLIT_DIR = os.path.join(WORK_DIR, "splits")

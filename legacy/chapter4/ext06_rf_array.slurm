@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 #SBATCH -J ext_rf
 #SBATCH -t 12:00:00
-#SBATCH -o /datapool/zhangw/duwenchao/var/2511_PCR_Bias/external_test/logs_slurm/%x_%A_%a.out
-#SBATCH -e /datapool/zhangw/duwenchao/var/2511_PCR_Bias/external_test/logs_slurm/%x_%A_%a.err
+#SBATCH -o /path/to/PCR_bias_chapter4/external_test/logs_slurm/%x_%A_%a.out
+#SBATCH -e /path/to/PCR_bias_chapter4/external_test/logs_slurm/%x_%A_%a.err
 
 set -euo pipefail
 
@@ -20,7 +20,7 @@ fi
 dataset_dir="$(echo "${line}" | awk -F'\t' '{print $1}')"
 out_dir="$(echo "${line}" | awk -F'\t' '{print $2}')"
 
-python /datapool/zhangw/duwenchao/var/2511_PCR_Bias/scripts/ext06a_train_rf_external_one.py \
+python /path/to/PCR_bias_chapter4/scripts/ext06a_train_rf_external_one.py \
   --dataset_dir "${dataset_dir}" \
   --out_dir "${out_dir}" \
   --n_estimators "${N_ESTIMATORS:-1200}" \

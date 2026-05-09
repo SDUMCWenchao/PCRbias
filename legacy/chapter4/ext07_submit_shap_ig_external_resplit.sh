@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-PROJECT_ROOT="/datapool/zhangw/duwenchao/var/2511_PCR_Bias"
+PROJECT_ROOT="/path/to/PCR_bias_chapter4"
 
 # === inputs/models roots (resplit v1) ===
 INPUTS_ROOT="$PROJECT_ROOT/external_test/analysis_results/05_ModelInputs_external_topbias_resplit_v1"
@@ -79,7 +79,7 @@ cat > "$SLURM_FILE" <<SLURM
 #SBATCH --array=1-1%${CONCURRENCY}
 
 set -euo pipefail
-PROJECT_ROOT="/datapool/zhangw/duwenchao/var/2511_PCR_Bias"
+PROJECT_ROOT="/path/to/PCR_bias_chapter4"
 TASKS_TSV="\$PROJECT_ROOT/external_test/analysis_results/_tasks_ext07_attr/tasks.tsv"
 
 SPLIT="${SPLIT}"

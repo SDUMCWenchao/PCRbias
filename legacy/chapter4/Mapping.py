@@ -3,7 +3,7 @@ import subprocess
 import glob
 
 # === 1. 配置路径 (请根据实际情况修改) ===
-base_dir = "/datapool/zhangw/duwenchao/var/2511_PCR_Bias/"
+base_dir = "/path/to/PCR_bias_chapter4/"
 raw_data_dir = os.path.join(base_dir, "raw_data")
 # 输出目录
 map_dir = os.path.join(base_dir, "analysis", "02_Mapping")
@@ -12,7 +12,7 @@ log_dir = os.path.join(map_dir, "logs")
 # === 参考基因组设置 (CRITICAL) ===
 # 假设你有一个包含所有物种线粒体序列的 fasta 文件
 # 如果针对不同样本用不同参考，逻辑会更复杂。这里假设是用一个 Combined Reference 进行竞争性比对 (推荐用于 10mix)
-ref_fasta = "/datapool/zhangw/duwenchao/var/2511_PCR_Bias/refs/combined_mito_ref.fasta" 
+ref_fasta = "/path/to/PCR_bias_chapter4/refs/combined_mito_ref.fasta"
 
 # 检查目录
 for d in [map_dir, log_dir]:
@@ -33,17 +33,17 @@ fq_files = glob.glob(os.path.join(raw_data_dir, "*.fq")) + glob.glob(os.path.joi
 for fq in fq_files:
     sample_name = os.path.basename(fq).split('.')[0]
     bam_out = os.path.join(map_dir, f"{sample_name}.sorted.bam")
-    
+
     # 构建 BWA MEM 命令 (增加 Read Group 信息这对后续分析很重要)
     # 假设是单端测序 (Single End)
     rg_tag = f"@RG\\tID:{sample_name}\\tSM:{sample_name}\\tPL:ILLUMINA"
-    
+
     cmd = (
         f"bwa mem -t 8 -R '{rg_tag}' {ref_fasta} {fq} | "
         f"samtools view -Sb - | "
         f"samtools sort - -o {bam_out}"
     )
-    
+
     # 索引 BAM 文件
     index_cmd = f"samtools index {bam_out}"
 

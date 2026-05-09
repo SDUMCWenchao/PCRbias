@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-PROJECT_DIR="${1:-/datapool/zhangw/duwenchao/var/2511_PCR_Bias/external_test}"
+PROJECT_DIR="${1:-/path/to/PCR_bias_chapter4/external_test}"
 MODELS_ROOT="${2:-$PROJECT_DIR/analysis_results/06_Models_external_topbias_v2_resplit_v1}"
 OUT_TAR="${3:-$PROJECT_DIR/analysis_results/_deliver/external_attr_tables.tar.gz}"
 

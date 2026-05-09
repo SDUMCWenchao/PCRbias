@@ -8,46 +8,81 @@ failing CI.
 from __future__ import annotations
 
 import argparse
+from collections.abc import Iterable, Sequence
 from pathlib import Path
 import sys
 
 ROOT = Path(__file__).resolve().parents[1]
-PATTERNS = ["/datapool", "/home/", "C:/Users/"]
-EXCLUDE_DIRS = {".git", "__pycache__", ".pytest_cache", ".mypy_cache", ".ruff_cache"}
-EXCLUDE_FILES = {"docs/HARDCODED_PATHS.tsv"}
+PATTERNS = ("/datapool", "/home/", "C:/Users/")
+EXCLUDE_DIRS = frozenset({".git", "__pycache__", ".pytest_cache", ".mypy_cache", ".ruff_cache"})
+EXCLUDE_FILES = frozenset(
+    {"docs/HARDCODED_PATHS.tsv", "tools/audit_hardcoded_paths.py", "tests/test_tools.py"}
+)
+Hit = tuple[Path, int, str]
 
 
-def scan() -> list[tuple[Path, int, str]]:
-    hits: list[tuple[Path, int, str]] = []
-    for path in ROOT.rglob("*"):
-        if not path.is_file():
-            continue
-        rel = path.relative_to(ROOT)
-        if str(rel) in EXCLUDE_FILES:
-            continue
-        if any(part in EXCLUDE_DIRS for part in rel.parts):
+def _is_excluded(path: Path, root: Path, exclude_dirs: Iterable[str], exclude_files: Iterable[str]) -> bool:
+    """Return True when ``path`` should be skipped by the scanner."""
+    rel = path.relative_to(root)
+    excluded_dirs = set(exclude_dirs)
+    excluded_files = set(exclude_files)
+    return str(rel) in excluded_files or any(part in excluded_dirs for part in rel.parts)
+
+
+def scan(
+    root: Path = ROOT,
+    patterns: Sequence[str] = PATTERNS,
+    exclude_dirs: Iterable[str] = EXCLUDE_DIRS,
+    exclude_files: Iterable[str] = EXCLUDE_FILES,
+) -> list[Hit]:
+    """Return hard-coded path hits under ``root``.
+
+    Parameters are injectable so tests and downstream users can scan temporary
+    trees without mutating module-level constants.
+    """
+    hits: list[Hit] = []
+    root = root.resolve()
+    for path in root.rglob("*"):
+        if not path.is_file() or _is_excluded(path, root, exclude_dirs, exclude_files):
             continue
         try:
             text = path.read_text(errors="ignore")
-        except Exception:
+        except OSError:
             continue
         for lineno, line in enumerate(text.splitlines(), 1):
-            if any(pattern in line for pattern in PATTERNS):
-                hits.append((rel, lineno, line.strip()))
+            if any(pattern in line for pattern in patterns):
+                hits.append((path.relative_to(root), lineno, line.strip()))
     return hits
 
 
-def main() -> int:
-    parser = argparse.ArgumentParser()
+def build_parser() -> argparse.ArgumentParser:
+    parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
         "--legacy-mode",
         choices=["fail", "report"],
         default="fail",
         help="Use 'report' while legacy scripts intentionally preserve original paths.",
     )
-    args = parser.parse_args()
+    parser.add_argument(
+        "--root",
+        type=Path,
+        default=ROOT,
+        help="Repository root to scan (defaults to the parent of tools/).",
+    )
+    parser.add_argument(
+        "--pattern",
+        action="append",
+        dest="patterns",
+        help="Additional private/server path pattern to flag. Can be repeated.",
+    )
+    return parser
 
-    hits = scan()
+
+def main(argv: Sequence[str] | None = None) -> int:
+    args = build_parser().parse_args(argv)
+
+    patterns = (*PATTERNS, *(args.patterns or ()))
+    hits = scan(root=args.root, patterns=patterns)
     if hits:
         print("Hard-coded path hits:")
         for rel, lineno, line in hits:

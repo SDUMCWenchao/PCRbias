@@ -46,9 +46,17 @@ python -m pip install -r requirements.txt
 ```bash
 bash tools/smoke_test.sh
 python tools/audit_hardcoded_paths.py --legacy-mode report
+python -m pytest
 ```
 
 `smoke_test.sh` checks Python and Shell/Slurm syntax. It does not validate scientific outputs because the public draft does not include the original large FASTQ/BAM/intermediate data.
+
+The audit and inventory utilities also support temporary or downstream repositories via explicit roots:
+
+```bash
+python tools/audit_hardcoded_paths.py --root /path/to/repo --pattern /private/path
+python tools/make_inventory.py --root /path/to/repo --output /tmp/script_inventory.tsv
+```
 
 ## Recommended entry points
 

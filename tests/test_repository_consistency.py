@@ -41,3 +41,35 @@ def test_run_order_checker_flags_missing_script(tmp_path: Path) -> None:
     assert problems == [
         "run-order script not found in docs/RUN_ORDER.chapter2_3.tsv: missing.py"
     ]
+
+
+def test_chapter4_status_allows_existing_non_script_entries(tmp_path: Path) -> None:
+    docs = tmp_path / "docs"
+    chapter4 = tmp_path / "legacy" / "chapter4"
+    docs.mkdir()
+    chapter4.mkdir(parents=True)
+    (chapter4 / "workflow.py").write_text("print('ok')\n", encoding="utf-8")
+    (chapter4 / "samples_meta.tsv").write_text("file_id\nS1\n", encoding="utf-8")
+    (docs / "CHAPTER4_SCRIPT_STATUS.tsv").write_text(
+        "path\tstatus\tnotes\n"
+        "legacy/chapter4/workflow.py\tcanonical_or_support\tcovered script\n"
+        "legacy/chapter4/samples_meta.tsv\texample_input\tcovered input\n",
+        encoding="utf-8",
+    )
+
+    problems = check_repository_consistency.check_chapter4_status_coverage(tmp_path)
+
+    assert problems == []
+
+
+def test_chapter4_status_flags_missing_documented_paths(tmp_path: Path) -> None:
+    docs = tmp_path / "docs"
+    docs.mkdir()
+    (docs / "CHAPTER4_SCRIPT_STATUS.tsv").write_text(
+        "path\tstatus\tnotes\nlegacy/chapter4/missing.tsv\texample_input\tmissing input\n",
+        encoding="utf-8",
+    )
+
+    problems = check_repository_consistency.check_chapter4_status_coverage(tmp_path)
+
+    assert problems == ["stale Chapter 4 status entry: legacy/chapter4/missing.tsv"]
